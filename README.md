@@ -16,7 +16,7 @@ Be sure to:
 
 ## **Architecture of GobstonesWeb2**
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities
-We describe the list of modules and their relationship [here]((https://github.com/gobstones/.github/blob/new-readme/gobstonesweb2-architecture.md).
+We describe the list of modules and their relationship [here]((https://github.com/gobstones/.github/blob/new-readme/GobstonesWeb2-Architecture.md).
 
 ## **Technologies used**
 
