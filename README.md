@@ -1,4 +1,4 @@
-# **Guidelines to contribute to GobstonesWeb2 development**
+# Guidelines to contribute to GobstonesWeb2 development
 
 This repository contains documentation on the platform architecture, design guidelines, contribution and others, related to the development of **GobstonesWeb2**.
 
@@ -14,17 +14,17 @@ Be sure to:
 * Get to know the project governance chain and communication channels.
 * Maintain the code standards for all projects and code submissions.
 
-## **Architecture of GobstonesWeb2**
+## Architecture of **GobstonesWeb2**
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities
 We describe the list of modules and their relationship [here](https://github.com/gobstones/.github/blob/new-readme/GobstonesWeb2-Architecture.md).
 
-## **Technologies used**
+## Technologies used
+**GobstonesWeb2** is based on `Node.js` and uses mainly `Typescript` and several technologies associated with those.
+We provide different levels of description on what technologies and how to use them [here](https://github.com/gobstones/gobstones-guidelines/blob/develop-guidelines/TechnologiesUsed.md).
 
-## **Governance and flow of communication**
+## Governance and flow of communication
 
-## **Code standards**
+## Code standards
 
-
-## **Contributing**
-
+## Contributing
 In order to contribute, be sure to understand everything defined here.
