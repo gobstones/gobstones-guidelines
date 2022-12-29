@@ -38,6 +38,8 @@ If you need help on installing these elements in your system, we provide a [shor
 
 ## Other technologies
 
+**TO BE DEVELOPED**
+
 rollup, nps, jest, prettier, eslint, editorconfig
 
 [Back to Guidelines](../README.md).
