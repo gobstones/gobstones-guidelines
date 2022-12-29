@@ -16,15 +16,19 @@ Be sure to:
 
 ## Architecture of **GobstonesWeb2**
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities
-We describe the list of modules and their relationship [here](https://github.com/gobstones/.github/blob/new-readme/GobstonesWeb2-Architecture.md).
+We describe the list of modules and their relationship [here](./sections/gobstonesweb2-architecture.md).
 
 ## Technologies used
 **GobstonesWeb2** is based on `Node.js` and uses mainly `Typescript` and several technologies associated with those.
-We provide different levels of description on what technologies and how to use them [here](https://github.com/gobstones/gobstones-guidelines/blob/develop-guidelines/TechnologiesUsed.md).
+We provide different levels of description on what technologies and how to use them [here](./sections/technologies-used.md).
 
 ## Governance and flow of communication
 
 ## Code standards
-
+Please follow this conventions for filenames:
+ * Names should be descriptive and be in english
+ * All lowercase with kebab-case should be used for filenames, with no spaces 
+   (Except README,   CONTRIBUTING and LICENSE that are all uppercase)
+ * Only use CamelCase for classes in TS, not documentation files.
 ## Contributing
 In order to contribute, be sure to understand everything defined here.

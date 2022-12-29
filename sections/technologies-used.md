@@ -34,5 +34,8 @@ Again, there are several ones, but many of us use <b>Visual Studio Code</b> (<co
 A good starting point to know the basics on `VSCode` is [`code.visualstudio.com`](https://code.visualstudio.com/docs).
 </p></details>
 
-If you need help on installing these elements in your system, we provide a [short tutorial](./InstallationTutorial.md).
+If you need help on installing these elements in your system, we provide a [short tutorial](./installation-tutorial.md).
 
+## Other technologies
+
+rollup, nps, jest, prettier, eslint, editorconfig
