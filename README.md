@@ -1,4 +1,4 @@
-# Guidelines to contribute to GobstonesWeb2 development
+# Guidelines to contribute to **GobstonesWeb2** development
 
 This repository contains documentation on the platform architecture, design guidelines, contribution and others, related to the development of **GobstonesWeb2**.
 
