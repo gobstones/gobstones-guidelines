@@ -23,10 +23,12 @@ We describe the list of modules and their relationship [here](./sections/gobston
 We provide different levels of description on what technologies and how to use them [here](./sections/technologies-used.md).
 
 ## Governance and flow of communication
-
+Project governance provides direction and defines decision making.
+Flow of communication guarantees that all constributors are aware of the latest decisions in the project that may affect them.
+You can read more about **GobstonesWeb2** governance and flow of communication [here](./sections/governance-and-communication.md).
 ## Code standards
 We follow a series of standards when coding and naming elements. 
 Please, be sure fo follow those standards when contributing to the project.
-You can read more about those standards, [here](./sections/code-standards.md).
+You can read more about those standards [here](./sections/code-standards.md).
 ## Contributing
-In order to contribute, be sure to understand everything defined here.
+In order to contribute, be sure to understand everything defined in this README and its sections.

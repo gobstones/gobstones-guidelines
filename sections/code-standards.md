@@ -1,4 +1,4 @@
-# Code standards for GobstonesWeb2
+# Code standards for **GobstonesWeb2**
 
 **TO BE DEVELOPED**
 
@@ -8,3 +8,5 @@ Please follow this conventions for filenames:
  * All lowercase with kebab-case should be used for filenames, with no spaces 
    (Except README,   CONTRIBUTING and LICENSE that are all uppercase)
  * Only use CamelCase for classes in TS, not documentation files.
+
+ Kebab case -- or kebab-case -- is a programming variable naming convention where a developer replaces the spaces between words with a dash. Programming variable names should be descriptive.
