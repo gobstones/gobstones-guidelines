@@ -10,3 +10,5 @@ Please follow this conventions for filenames:
  * Only use CamelCase for classes in TS, not documentation files.
 
  Kebab case -- or kebab-case -- is a programming variable naming convention where a developer replaces the spaces between words with a dash. Programming variable names should be descriptive.
+
+[Back to Guidelines](../README.md).

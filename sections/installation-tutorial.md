@@ -51,4 +51,6 @@ Let's go to the installation. Skip any steps that you already performed.
 
 Voilà. You are now ready to start exploring the package.
 
-Return to [TechnologiesUsed](./TechnologiesUsed.md).
+[Back to Technologies Used](./technologies-used.md).
+
+[Back to Guidelines](../README.md).

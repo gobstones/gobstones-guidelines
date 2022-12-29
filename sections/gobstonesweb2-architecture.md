@@ -37,3 +37,5 @@ The complete list of repositories to be used on **GobstonesWeb2** (either planne
 
 </p>
 </details>
+
+[Back to Guidelines](../README.md).
