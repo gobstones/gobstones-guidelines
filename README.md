@@ -25,10 +25,8 @@ We provide different levels of description on what technologies and how to use t
 ## Governance and flow of communication
 
 ## Code standards
-Please follow this conventions for filenames:
- * Names should be descriptive and be in english
- * All lowercase with kebab-case should be used for filenames, with no spaces 
-   (Except README,   CONTRIBUTING and LICENSE that are all uppercase)
- * Only use CamelCase for classes in TS, not documentation files.
+We follow a series of standards when coding and naming elements. 
+Please, be sure fo follow those standards when contributing to the project.
+You can read more about those standards, [here](./sections/code-standards.md).
 ## Contributing
 In order to contribute, be sure to understand everything defined here.
