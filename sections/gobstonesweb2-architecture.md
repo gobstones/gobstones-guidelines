@@ -14,14 +14,14 @@ The architecture of **GobstonesWeb2** is established by the dependencies between
 
 The complete list of repositories to be used on **GobstonesWeb2** (either planned or under development).
 * [`gobstones-admin-dashboard`](https://github.com/gobstones/gobstones/gobstones-admin-dashboard), a dashboard for the Gobstones server, 
-* [`gobstones-assertions`](https://github.com/gobstones/gobstones/gobstones-assertions), a static and semantic code analyzer for Gobstones langauge, 
+* [`gobstones-assertions`](https://github.com/gobstones/gobstones/gobstones-assertions), a static and semantic code analyzer for Gobstones language, 
 * [`gobstones-blocks`](https://github.com/gobstones/gobstones-blocks), a framework agnostic Gobstones Blockly component, 
 * [`gobstones-blocks-react`](https://github.com/gobstones/gobstones/gobstones-blocks-react), the REACT layer over gobstones-blocks,
 * [`gobstones-board`](https://github.com/gobstones/gobstones/gobstones-board), a representation for Gobstones boards,
 * [`gobstones-board-react`](https://github.com/gobstones/gobstones/gobstones-board-react), the REACT layer over the gobstones-board,
 * [`gobstones-code-editor`](https://github.com/gobstones/gobstones/gobstones-code-editor), a code editor to use with Gobstones,
 * [`gobstones-core`](https://github.com/gobstones/gobstones-core), a set of utility tools used through all GobstonesWeb2 repositories,
-* [`gobstones-ide`](https://github.com/gobstones/gobstones-ide), the IDE component, with the actual enviornment, 
+* [`gobstones-ide`](https://github.com/gobstones/gobstones-ide), the IDE component, with the actual environment, 
 * [`gobstones-gbb-parser`](https://github.com/gobstones/gobstones-gbb-parser), a parser/printer for GBB (Gobstones Board) file format,
 * [`gobstones-guidelines`](https://github.com/gobstones/gobstones/gobstones-guidelines), fundamental documentation to contribute to GobstonesWeb2,
 * [`gobstones-lang`](https://github.com/gobstones/gobstones/gobstones-lang), a compiler for Gobstones language,
@@ -35,18 +35,5 @@ The complete list of repositories to be used on **GobstonesWeb2** (either planne
 * [`gobstones-test`](https://github.com/gobstones/gobstones/gobstones-test), a unit testing framework for Gobstones language,
 * [`gobstones-typechecker`](https://github.com/gobstones/gobstones/gobstones-typechecker), a typechecker for Gobstones language.
 
-Not in the diagram:
-* [`gobstones-api-docs`](https://github.com/gobstones/gobstones/gobstones-api-docs), an API Docs web page for GobstonesWeb (does not appear in the diagram),
-* [`template-gobstones-typescript-library`](https://github.com/gobstones/gobstones/template-gobstones-typescript-library), a template project to create new typescript languages for the Gobstones platform (does not appear in the diagram).
-<details>
-<summary>To determine</summary>
-<p>
-
-These repositories have to be determined about their purpose.
-* `gobstones-board-react-refactor` - Refactoring of the gobstones-board-react proyect (lmattera)
-* `gobstones-classroom-server` - API for the administration of Gobstones courses and tracking of students' progress (JuanEscalada)
-* `gobstones-backoffice` - Gobstones Backoffice Client (JuanEscalada)
-</p>
-</details>
 </p>
 </details>
