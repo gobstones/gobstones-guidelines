@@ -24,10 +24,10 @@ We provide different levels of description on what technologies and how to use t
 
 ## Governance and flow of communication
 Project governance provides direction and defines decision making.
-Flow of communication guarantees that all constributors are aware of the latest decisions in the project that may affect them.
+Flow of communication guarantees that all contributors are aware of the latest decisions in the project that may affect them.
 You can read more about **GobstonesWeb2** governance and flow of communication [here](./sections/governance-and-communication.md).
-## Code standards
-We follow a series of standards when coding and naming elements. 
+## Code standards and workflow
+We follow a series of standards when coding and naming elements, and also a specific workflow. 
 Please, be sure fo follow those standards when contributing to the project.
 You can read more about those standards [here](./sections/code-standards.md).
 ## Contributing
