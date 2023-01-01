@@ -2,9 +2,8 @@
 
 ## Installing on **WSL** for use with **VSCode** on **Windows**
 
-I will explain how to use **VSCode**, using **WSL** on **Windows**. 
-If you are not familiar with **VSCode** or **WSL**, you may want to start [here](https://code.visualstudio.com/docs). 
-It explains clearly how to install both **VSCode** and **WSL** from scratch.
+This brief tutorial is an explanation for beginners on how to use **VSCode**, using **WSL** on **Windows**. 
+You may read about [**VSCode** and **WSL**](https://code.visualstudio.com/docs) if you are not familiar with them, where a clear explanation of how to install both **VSCode** and **WSL** from scratch is given.
 
 You may test the packaged either using **VSCode** from **Windows** or on a new **WSL** window, but to be able to debug it, it is best to use a new **WSL** window.
 
@@ -32,7 +31,7 @@ Let's go to the installation. Skip any steps that you already performed.
 
     **NOTE:** I tried to debug the component from inside **VSCode** running it directly on **Windows**, but I failed, so I went for the conservative approach.
 
-    Remember to follow the guidelines described in [**Gobstones Guidelines**]() regarding the use of branches and pull-requests if you are going to experiment.
+    Remember to follow the guidelines described in [**Code standards and workflow**](./code-standards-and-workflow.md) regarding the use of branches and pull-requests if you are going to experiment.
 
 5. The next step is to open **VSCode**, and connect to a remote host to be able to run it inside **WSL**. 
    For that you use the `><` icon on the lower left corner of the window, and select `New WSL Window`. 
