@@ -39,14 +39,14 @@ Let's go to the installation. Skip any steps that you already performed.
 
 6. The following step is to open the package folder using `Open Folder` (either from the `File` menu, the button on the `Explorer`, the link in the `Getting started` window, or by using the keyboard shortcut -- by default, `CTRL-K CTRL-O`).
 
-7. The final step is installing the component, by fetching all the dependencies. 
+7. Perhaps before proceeding with the final step, you may want to perform an update, running first 
+   
+   ```npm update```
+
+8. The final step is installing the component, by fetching all the dependencies. 
    For that, open a console (`CTRL-%60`), and run 
    
    ```npm install```
-
-   Perhaps you may want to perform an update, running first 
-   
-   ```npm update```
 
 Voilà. You are now ready to start exploring the package.
 
