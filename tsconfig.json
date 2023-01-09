@@ -1,0 +1,11 @@
+{
+    "include": ["./sections/**/*.ts", "index.ts" ],
+    "typedocOptions": {
+        "entryPoints": ["./sections/index.ts", "./sections/**/*.ts"],
+        "media": ["./sections/media"]
+    },
+    "compilerOptions": { 
+        "out": "out",
+        "module": "system"
+    }
+}

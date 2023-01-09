@@ -1,0 +1,6 @@
+{
+  "name": "gobstones-guidelines",
+  "dependencies": {
+    "typedoc": "^0.23.24"
+  }
+}
