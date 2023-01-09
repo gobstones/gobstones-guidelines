@@ -1,6 +1,7 @@
 {
-    "include": ["./sections/**/*.ts", "index.ts" ],
+    "include": [ "sections/index.ts", "./sections/**/*.ts" ],
     "typedocOptions": {
+        "includes": "./sections/contents",
         "entryPoints": ["./sections/index.ts", "./sections/**/*.ts"],
         "media": ["./sections/media"]
     },

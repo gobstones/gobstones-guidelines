@@ -15,4 +15,6 @@ Be sure to:
 * Maintain the code standards for all projects and code submissions.
 
 ## Contributing
-In order to contribute, be sure to understand everything defined in these [guidelines](./modules.html).
+In order to contribute, be sure to understand everything defined in these guidelines.
+Start at the [Introduction](https://gobstones.github.io/gobstones-guidelines/docs/modules.00_Introduction.html)
+guiding you trough all the sections.
