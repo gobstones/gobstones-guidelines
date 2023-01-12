@@ -1,4 +1,4 @@
-# Instructions to install a repository from Scratch
+# Instructions to install a repository, for newcomers
 
 ## Installing on **WSL** for use with **VSCode** on **Windows**
 
@@ -16,7 +16,7 @@ Let's go to the installation. Skip any steps that you already performed.
 
     ```sudo apt install npm``` 
 
-   (after updating your `apt` with `sudo apt-get update`) on a **WSL** terminal. 
+   (after updating your `apt` with `sudo apt-get update`, if needed) on a **WSL** terminal. 
    Check the success of installation with `node -v`.
 
 3. As you will also use `Typescript`, you will need to install it as well, by running 
@@ -31,7 +31,7 @@ Let's go to the installation. Skip any steps that you already performed.
 
     **NOTE:** I tried to debug the component from inside **VSCode** running it directly on **Windows**, but I failed, so I went for the conservative approach.
 
-    Remember to follow the guidelines described in [**Code standards and workflow**](./code-standards-and-workflow.md) regarding the use of branches and pull-requests if you are going to experiment.
+    Remember to follow the guidelines described in [**Coding standards and workflow**](./coding-standards.md) regarding the use of branches and pull-requests if you are going to experiment.
 
 5. The next step is to open **VSCode**, and connect to a remote host to be able to run it inside **WSL**. 
    For that you use the `><` icon on the lower left corner of the window, and select `New WSL Window`. 
@@ -39,7 +39,7 @@ Let's go to the installation. Skip any steps that you already performed.
 
 6. The following step is to open the package folder using `Open Folder` (either from the `File` menu, the button on the `Explorer`, the link in the `Getting started` window, or by using the keyboard shortcut -- by default, `CTRL-K CTRL-O`).
 
-7. Perhaps before proceeding with the final step, you may want to perform an update, running first 
+7. If needed, before proceeding with the final step, you may want to perform an update, running first 
    
    ```npm update```
 
@@ -50,6 +50,8 @@ Let's go to the installation. Skip any steps that you already performed.
 
 Voilà. You are now ready to start exploring the package.
 
-[Back to Technologies Used](./technologies-used.md).
+[Back to Technologies](./technologies-used.md).
+
+[Back to Introduction](./introduction.md)
 
 [Back to Guidelines](../README.md).

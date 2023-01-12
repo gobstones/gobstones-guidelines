@@ -12,3 +12,9 @@ There is also a list of close advisors, that sometimes are also involved in maki
   * Federico A. Sawady O'Connor, [`github.com/sawady`](https://github.com/sawady)
   * Federico Aloi, [`github.com/faloi`](https://github.com/faloi)
   * Pablo Barenbaum, [`github.com/foones`](https://github.com/foones)
+
+[Back to Governance](./governance.md)
+
+[Back to Introduction](./introduction.md)
+
+[Back to Guidelines](../README.md)

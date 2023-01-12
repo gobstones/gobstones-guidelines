@@ -1,17 +1,14 @@
 # **Architecture of **GobstonesWeb2**** 
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities
 For each module, there will be a repository in the organization.
-The guidelines ask for all repositories to share a basic configuration structure, and in order to ensure it, there is a special module, in repository [gobstones-scripts](https://github.com/gobstones/gobstones-scripts),that all repositories of **GobstonesWeb2** must depend on providing the means to automate such sharing. 
+The guidelines ask for all repositories to share a basic configuration structure, and in order to ensure it, there is a special module, in repository [gobstones-scripts](https://github.com/gobstones/gobstones-scripts),that all repositories of **GobstonesWeb2** must depend on, providing the means to automate such sharing. 
 In this way, when the team decide to change something on the common configuration, all repositories can be easily updated.
 
 The architecture of **GobstonesWeb2** is established by the dependencies between the modules provided by the different repositories belonging to the project, as presented in the following diagram:
 
 ![GobstonesWeb2 Architecture Diagram](./diagram-of-components.svg)
 
-<details>
-<summary>List of repositories of <b>GobstonesWeb2</b></summary>
-<p>
-
+<details><summary>List of repositories of <b>GobstonesWeb2</b></summary><p>
 The complete list of repositories to be used on **GobstonesWeb2** (either planned or under development).
 * [`gobstones-admin-dashboard`](https://github.com/gobstones/gobstones/gobstones-admin-dashboard), a dashboard for the Gobstones server, 
 * [`gobstones-assertions`](https://github.com/gobstones/gobstones/gobstones-assertions), a static and semantic code analyzer for Gobstones language, 
@@ -34,8 +31,17 @@ The complete list of repositories to be used on **GobstonesWeb2** (either planne
 * [`gobstones-server`](https://github.com/gobstones/gobstones/gobstones-server), the Gobstones server,
 * [`gobstones-test`](https://github.com/gobstones/gobstones/gobstones-test), a unit testing framework for Gobstones language,
 * [`gobstones-typechecker`](https://github.com/gobstones/gobstones/gobstones-typechecker), a typechecker for Gobstones language.
+</p></details>
 
-</p>
-</details>
+## Repositories configuration
+
+**_< Discuss gobstones-script >_**
+
+## Basic functionalities
+
+**_< Discuss gobstones-core >_**
+
+
+[Back to Introduction](./introduction.md)
 
 [Back to Guidelines](../README.md).
