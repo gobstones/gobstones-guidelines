@@ -15,11 +15,11 @@ You can [join the **Gobstones Community**](http://bit.ly/ComunidadGobstones).
 **GobstonesWeb2** is an open source project aimed at providing a new version of the current environment, with a solid architecture that is understandable, maintainable, and extensible.
 The **Core Group** is actively engaged in complete a MVP, and all contributions are welcome.
 
-If you are interested in contributing to **GobstonesWeb2**, please understand the flow of communication, and also the standards we use for the development, as described in these [**Guidelines**](../README.md).
+If you are interested in contributing to **GobstonesWeb2**, please understand the flow of communication, and also the standards we use for the development, as described in these [**Guidelines**](../../README.md).
 
 ## Flow of communication
 
-**TO BE DEVELOPED**
+_< TO BE DONE: describe flow of communication >_
 
 [Back to Introduction](./introduction.md)
 

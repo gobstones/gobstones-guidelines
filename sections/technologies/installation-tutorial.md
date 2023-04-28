@@ -31,7 +31,7 @@ Let's go to the installation. Skip any steps that you already performed.
 
     **NOTE:** I tried to debug the component from inside **VSCode** running it directly on **Windows**, but I failed, so I went for the conservative approach.
 
-    Remember to follow the guidelines described in [**Coding standards and workflow**](./coding-standards.md) regarding the use of branches and pull-requests if you are going to experiment.
+    Remember to follow the guidelines described in [**Coding standards and workflow**](../coding-standards/coding-standards.md) regarding the use of branches and pull-requests if you are going to experiment.
 
 5. The next step is to open **VSCode**, and connect to a remote host to be able to run it inside **WSL**.
    For that you use the `><` icon on the lower left corner of the window, and select `New WSL Window`.
@@ -50,8 +50,8 @@ Let's go to the installation. Skip any steps that you already performed.
 
 Voilà. You are now ready to start exploring the package.
 
-[Back to Technologies](./technologies-used.md).
+[Back to Technologies](./technologies.md).
 
-[Back to Introduction](./introduction.md)
+[Back to Introduction](../introduction.md).
 
-[Back to Guidelines](../README.md).
+[Back to Guidelines](../../README.md).
