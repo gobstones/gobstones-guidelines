@@ -8,6 +8,8 @@ The architecture of **GobstonesWeb2** is established by the dependencies between
 
 ![GobstonesWeb2 Architecture Diagram](./diagram-of-components.svg)
 
+We are currently working in redesigning some of the modules into new grouping. Expect changes on this graphic in the future.
+
 ## Details about repositories of GobstonesWeb2
 
 <details>
@@ -30,6 +32,7 @@ The architecture of **GobstonesWeb2** is established by the dependencies between
 * [`gobstones-gbb-parser`](https://github.com/gobstones/gobstones-gbb-parser), a parser/printer for GBB (Gobstones Board) file format,
 * [`gobstones-guidelines`](https://github.com/gobstones/gobstones-guidelines), fundamental documentation to contribute to GobstonesWeb2,
 * [`gobstones-lang`](https://github.com/gobstones/gobstones-lang), a compiler for Gobstones language,
+* [`gobstones-lang-def`](https://github.com/gobstones/gobstones-lang-def), a new module that will replace `gobstones-lang-intl` and `gobstones-parser` (currently not in the diagram).
 * [`gobstones-lang-intl`](https://github.com/gobstones/gobstones-lang-intl), translation for Gobstones language built-ins and keywords,
 * [`gobstones-lint`](https://github.com/gobstones/gobstones-lint), a linter for Gobstones language,
 * [`gobstones-markdown-view`](https://github.com/gobstones/gobstones-markdown-view), a markdown viewer for Gobstones,
