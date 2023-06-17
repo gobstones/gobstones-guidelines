@@ -32,9 +32,18 @@ In your local clone checkout the new issue-branch, and work on the change.
 When commiting, in the message describe briefly the things you modified.
 
 When you finish your changes, and before doing a pull-request, you must:
-  * be sure all tests pass, and the test coverage is enough (with `npm run test`),
-  * generate the documentation (with `npm run doc` -- take care no warnings for wrong links are produced), and
-  * build your module (with `npm run build`).
+  * be sure all tests pass, and the test coverage is enough 
+  
+          npm run test
+
+  * generate the documentation, taking care that no warnings for wrong links are produced
+
+          npm run doc
+
+  * build your module.
+  
+          npm run build
+
 After that, you made the pull-request, and ask for revision.
 Remember to indicate in the pull-request subject that it closes the corresponding issue, and change the status of the issue to _"Requested for revision"_.
 
