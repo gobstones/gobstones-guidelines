@@ -29,7 +29,7 @@ Once the issue is on the issue-tracker, its status is _"Todo"_, and it was not a
   * create a branch for the issue.
 
 In your local clone checkout the new issue-branch, and work on the change.
-When commiting, in the message describe briefly the things you modified.
+When committing, in the message describe briefly the things you modified.
 
 When you finish your changes, and before doing a pull-request, you must:
   * be sure all tests pass, and the test coverage is enough 
