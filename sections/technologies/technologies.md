@@ -64,7 +64,89 @@ If you need help on installing these elements in your system, [consult our short
 
 ## Other technologies
 
-_< TO BE DONE: explain rollup, nps, jest, prettier, eslint, editorconfig, typedoc... >_
+<!--- ---------- --->
+<!---   Rollup   --->
+<!--- ---------- --->
+As a means to bundle and compile code from the project modules, we use `rollup.js` which is designed for modern JavaScript development applications, focusing on creating efficient and optimized bundles for the web.
+<details>
+<summary>Expand to view more about <b>rollup.js</b></summary>
+
+A good starting point to know the basics on `rollup.js` is [`rollupjs.org`](https://rollupjs.org/).
+</details>
+
+---
+
+<!--- ---------- --->
+<!---     nps    --->
+<!--- ---------- --->
+To define and execute custom scripts within `Node.js`, the project uses a `npm` feature called `nps` (Node Package Scripts) which can automate various tasks, such as building, testing, deploying, and more.
+<details>
+<summary>Expand to view more about <b>nps</b></summary>
+
+A good starting point to know the basics on `nps` is [`npmjs.com`](https://www.npmjs.com/package/nps).
+</details>
+
+---
+
+<!--- ---------- --->
+<!---  Prettier  --->
+<!--- ---------- --->
+For style consistency, the inclusion of the opinionated code formatter `Prettier` helps to automatically enforce a general set of styling rules.
+<details>
+<summary>Expand to view more about <b>Prettier</b></summary>
+
+A good starting point to know the basics on `Prettier` is [`prettier.io`](https://prettier.io/).
+</details>
+
+---
+
+<!--- ---------- --->
+<!---   ESLint   --->
+<!--- ---------- --->
+In addition to `Prettier` for maintainability of codebase, `ESLint` statically analyzes the code for common errors, stylistic issues, and potential pitfalls, thus providing actionable feedback to fix such problems for `Javascript`/`Typescript`.
+<details>
+<summary>Expand to view more about <b>ESLint</b></summary>
+
+A good starting point to know the basics on `ESLint` is [`eslint.org`](https://eslint.org/).
+</details>
+
+---
+
+<!--- ------------ --->
+<!--- EditorConfig --->
+<!--- ------------ --->
+For more style and formatting consistency, there is also the inclusion of `EditorConfig`, a file format that works across different code editors and IDEs.
+<details>
+<summary>Expand to view more about <b>EditorConfig</b></summary>
+
+A good starting point to know the basics on `EditorConfig` is [`editorconfig.org`](https://editorconfig.org/).
+</details>
+
+---
+
+<!--- ---------- --->
+<!---  TypeDoc   --->
+<!--- ---------- --->
+As a way to generate documentation, the `TypeDoc` tool reads the `TypeScript` source files, parses comments contained within them, and creates API documentation for a more comprehensive and well-structured documentation of the project.
+<details>
+<summary>Expand to view more about <b>TypeDoc</b></summary>
+
+A good starting point to know the basics on `TypeDoc` is [`typedoc.org`](https://typedoc.org/guides/overview/).
+</details>
+
+---
+
+<!--- ---------- --->
+<!---    Jest    --->
+<!--- ---------- --->
+Last but not least, you will be creating, running, and managing test suites with `Jest` testing framework. It works with `TypeScript` code, providing a comprehensive set of tools and features to simplify the process of writing and maintaining tests.
+<details>
+<summary>Expand to view more about <b>Jest</b></summary>
+
+A good starting point to know the basics on `Jest` is [`jestjs.io`](https://jestjs.io/).
+</details>
+
+---
 
 [Back to Introduction](../introduction.md).
 
