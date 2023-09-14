@@ -67,7 +67,7 @@ If you need help on installing these elements in your system, [consult our short
 <!--- ---------- --->
 <!---   Rollup   --->
 <!--- ---------- --->
-As a means to bundle and compile code from the project modules, we use `rollup.js` which is designed for modern JavaScript development applications, focusing on creating efficient and optimized bundles for the web.
+As a means to bundle and compile code from the project modules, we rely on `rollup.js`.  This tool is designed for modern JavaScript development applications, focusing on creating efficient and optimized bundles for the web.
 <details>
 <summary>Expand to view more about <b>rollup.js</b></summary>
 
@@ -79,7 +79,7 @@ A good starting point to know the basics on `rollup.js` is [`rollupjs.org`](http
 <!--- ---------- --->
 <!---     nps    --->
 <!--- ---------- --->
-To define and execute custom scripts within `Node.js`, the project uses a `npm` feature called `nps` (Node Package Scripts) which can automate various tasks, such as building, testing, deploying, and more.
+To define and execute custom scripts within `Node.js`, our project uses a `npm` feature called `nps` (Node Package Scripts) which can automate various tasks, such as building, testing, deploying, and more.
 <details>
 <summary>Expand to view more about <b>nps</b></summary>
 
@@ -91,7 +91,7 @@ A good starting point to know the basics on `nps` is [`npmjs.com`](https://www.n
 <!--- ---------- --->
 <!---  Prettier  --->
 <!--- ---------- --->
-For style consistency, the inclusion of the opinionated code formatter `Prettier` helps to automatically enforce a general set of styling rules.
+To ensure uniformity in coding style, we integrate the opinionated code formatter `Prettier` to automatically enforce a  standardized set of styling rules.
 <details>
 <summary>Expand to view more about <b>Prettier</b></summary>
 
@@ -103,7 +103,7 @@ A good starting point to know the basics on `Prettier` is [`prettier.io`](https:
 <!--- ---------- --->
 <!---   ESLint   --->
 <!--- ---------- --->
-In addition to `Prettier` for maintainability of codebase, `ESLint` statically analyzes the code for common errors, stylistic issues, and potential pitfalls, thus providing actionable feedback to fix such problems for `Javascript`/`Typescript`.
+In addition to `Prettier` for maintainability of codebase  throughout our project, `ESLint` statically analyzes the code for common errors, stylistic issues, and potential pitfalls, thus providing actionable feedback to fix such problems for both `Javascript` and `Typescript`, ensuring the code's quality and reliability.
 <details>
 <summary>Expand to view more about <b>ESLint</b></summary>
 
