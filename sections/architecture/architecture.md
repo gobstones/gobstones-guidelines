@@ -47,11 +47,33 @@ We are currently working in redesigning some of the modules into new grouping. E
 
 ## Repositories configuration
 
-_< TO BE DONE: Discuss gobstones-script >_
+The [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module is used to create other modules for the [GobstonesWeb2] platform, and to abstract away configuration details in all the projects.
+
+The module can be used as a command line program that allows to create new modules, through the subcommands `create` or `init`. It provides several template for projects, such as creating simple libraries, command line applications and libraries, react components, and simple web components.
+
+The project's created have tools such as `typescript`, `rollup`, `nps`, `jest`, `typedoc` and others a development dependencies. In that sense, the modules created do not have dependencies for all those tools, having a dev-dependency only on `gobstones-scripts`, which in itself have dependencies on the tools. In that sense the module assumes a flat `node-modules` organization.
+
+Some configuration files needed by the tooling, such as `tsconfig.js` or `rollup.config.js`, are abstracted away by the `gobstones-script` module, which holds the configuration files. These configuration files have a default version, but, in case some module requires a particular configuration, these configuration files can be overwritten in the projects, by the subcommand `eject`.
+
+Other configuration files for some tooling, such as `.prettierc` used by `prettier`, or `.eslintrc` used by `ESLint`, are automatically created in the root of the created projects. Those files may require some sort of update as versions of the tooling are updated, or changed, and a such, the subcommand `update` allows for updating such files.
+
+Finally, the tool allows to run different actions defined through `nps`, by running the `run` subcommand.
+
+You can read more about the tool, configuration files, and tooling in the [Technologies we use](/../technologies/technologies.md) section.
 
 ## Basic functionalities
 
-_< TO BE DONE: Discuss gobstones-core >_
+Another useful project is [`gobstones-core`](https://github.com/gobstones/gobstones-core), that provides some basic utilities used through different projects.
+
+The project includes things such as the idea for `Event`'s that have typechecking, for throwing events that objects can subscribe to; some particular data structures or types, such as `BiMap` or `Subset`.
+
+Another utility provided is the `Expectations` module, that allows for setting up expectations to validate user inputs and other stuff.
+
+The `SourceReader` module provides a class that allows to provide source files and process them as a stream, reading one or more character at a time. This is useful for tokenizing inputs.
+
+This module is required by default in projects created by `gobstones-scripts`, and is required by most projects in used in [GobstonesWeb2].
+
+You can read more about the things the module exports in the [`gobstones-core's README`](https://github.com/gobstones/gobstones-core).
 
 
 [Back to Introduction](../introduction.md).
