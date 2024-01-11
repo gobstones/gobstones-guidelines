@@ -2,7 +2,7 @@
 
 **GobstonesWeb2** is based on several technologies. Knowledge on some of these technologies, such as the programming language `TypeScript`, `Node.js` or `git` is mandatory, if you want to contribute to the project with code. For others you may find configuration files at the root of the project, or automatically performed actions, and although a deep knowledge on such tools is not required in order to contribute, being at least aware of the technologies in use is a must.
 
-Most of these technologies and their configuration are totally or partially abstracted away through the [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module. You should read and understand how that module hides the configuration for some tools, allowing you to overriding the default in each project by **ejecting** the configuration files, as well as how it provides default configuration files that must be in the root of each project, but that are not meant to be modified, as we expect they are only changed through the tool by **updating** the files as a tool's action.
+Most of these technologies and their configuration are totally or partially abstracted away through the [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module. You should read and understand how that module hides the configuration for some tools, allowing you to override the default in each project by **ejecting** the configuration files, as well as how it provides default configuration files that must be in the root of each project, but that are not meant to be modified, as we expect they are only changed through the tool by **updating** the files as a tool's action.
 
 If you need help configuring the development environment, you may read the [Installation tutorial](./installation-tutorial.md).
 
@@ -185,7 +185,7 @@ We use `nps` as the task manager.
 To define and execute custom scripts within `Node.js`, running all the tooling in a simple fashion, we use `nps` (Node Package Scripts).
 `nps` it's a task manager or task executor (in the same fashion as `grunt` or `gulp`).
 
-The good thing about `nps` is that it does not require knowledge of complex models and tools, but it's just a one step up on manually running the command through the terminal one by one.
+The good thing about `nps` is that it does not require knowledge of complex models and tools, but it's just a one step up on manually running the command through the terminal one by one. `npm run` runs the commands in "scripts" defined in package.json. `nps` is useful when the commands needed to run exceed some simple commands. In all projects, running `npm start` runs the help on all defined `nps` commands.
 
 The configuration file for `nps`, `package-scripts.json` is abstracted away by `gobstones-scripts` by default, although you can eject it if you need to change the behavior of any task. This is a simple json file, listing all the possible tasks to run, and the code each of them will run on the terminal, along some description.
 
@@ -268,7 +268,7 @@ To ensure uniformity in coding format, we integrate the opinionated code formatt
 
 Note that prettier does not enforce the format, but rather allows you to reformat your code using the provided configuration. The IDE uses this to automatically reformat your code on saving a file. Also, `ESlint` integrates with `Prettier`, to verify that the format is compliant with the prettier configuration.
 
-The `Prettier` configuration files are present at the root of each project, as `.prettierrc` and `.prettierignore`, and should only be modified for all projects, through an update of `gobstones-script`.
+The `Prettier` configuration files are present at the root of each project, as `.prettierrc` and `.prettierignore`, and should only be modified for all projects, through an update of `gobstones-scripts`.
 
 You do not need to know much about `Prettier` to start using it in the project, as all the configuration has already been done for you, that is, unless you use a different IDE than `VSCode`. If you want to learn more about the tool, you may read [`prettier.io`](https://prettier.io/).
 </details>
@@ -291,11 +291,11 @@ We also include an `EditorConfig` file in every project.
 <summary>Expand to view more about <b>EditorConfig</b></summary>
 Although `Prettier` is a great tool for code formatting, some IDEs do not play along with prettier, or they do not do it by default. To support more IDEs and code editors we have included an `EditorConfig` file in each project.
 
-The `EditorConfig` file, `.editorconfig` contains basic formatting configuration to tell the code editor how you require your files to be treated, uch as line endings, tab width and so on.
+The `EditorConfig` file, `.editorconfig` contains basic formatting configuration to tell the code editor how you require your files to be treated, such as line endings, tab width and so on.
 
 This configuration should always match the one in your `Prettier` configuration, and should be the same through all projects, and as such, only should be changed through an update of `gobstones-scripts`.
 
-Again, you don't need to know much about `EditorConfig`, but it's a simple enough tool to understand by reading the provided documentation at[`editorconfig.org`](https://editorconfig.org/).
+Again, you don't need to know much about `EditorConfig`, but it's a simple enough tool to understand by reading the provided documentation at [`editorconfig.org`](https://editorconfig.org/).
 </details>
 
 <!----------------------------->
@@ -321,9 +321,9 @@ It statically analyzes the code for common errors, stylistic issues, and potenti
 
 `ESLint` uses the concept of plugins and templates, of which we use many to enforce some particular configuration. The linter is run by default before any test, and in case of style errors, the tests cannot pass.
 
-You will find the `ESLint` configuration file, `.eslintrc` at the root of every project. Again, it should not be changed unless through updates of `gobstones-scripts`.
+You will find the `ESLint` configuration file, `.eslintrc` at the root of every project. Again, it should not be changed except through updates of `gobstones-scripts`.
 
-You will usually not require changing these rules, but to understand the basic idea behind the linter, you may read the documentation at [`eslint.org`](https://eslint.org/).
+You will usually not require changing these rules, but to understand the basic idea behind the linter you may read the documentation at [`eslint.org`](https://eslint.org/).
 </details>
 
 <!----------------------->

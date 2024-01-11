@@ -1,0 +1,383 @@
+@import "./color_schemes/dark";
+
+/*************************************************************/
+/*     Color styles and definitions from TypeDoc's theme     */
+/*************************************************************/
+
+:root {
+    /* Light */
+    --light-color-background: #f2f4f8;
+    --light-color-background-secondary: #eff0f1;
+    --light-color-warning-text: #222;
+    --light-color-background-warning: #e6e600;
+    --light-color-icon-background: var(--light-color-background);
+    --light-color-accent: #c5c7c9;
+    --light-color-active-menu-item: var(--light-color-accent);
+    --light-color-text: #222;
+    --light-color-text-aside: #6e6e6e;
+    --light-color-link: #1f70c2;
+
+    --light-color-ts-keyword: #056bd6;
+    --light-color-ts-project: #b111c9;
+    --light-color-ts-module: var(--light-color-ts-project);
+    --light-color-ts-namespace: var(--light-color-ts-project);
+    --light-color-ts-enum: #7e6f15;
+    --light-color-ts-enum-member: var(--light-color-ts-enum);
+    --light-color-ts-variable: #4760ec;
+    --light-color-ts-function: #572be7;
+    --light-color-ts-class: #1f70c2;
+    --light-color-ts-interface: #108024;
+    --light-color-ts-constructor: var(--light-color-ts-class);
+    --light-color-ts-property: var(--light-color-ts-variable);
+    --light-color-ts-method: var(--light-color-ts-function);
+    --light-color-ts-call-signature: var(--light-color-ts-method);
+    --light-color-ts-index-signature: var(--light-color-ts-property);
+    --light-color-ts-constructor-signature: var(--light-color-ts-constructor);
+    --light-color-ts-parameter: var(--light-color-ts-variable);
+    /* type literal not included as links will never be generated to it */
+    --light-color-ts-type-parameter: var(--light-color-ts-type-alias);
+    --light-color-ts-accessor: var(--light-color-ts-property);
+    --light-color-ts-get-signature: var(--light-color-ts-accessor);
+    --light-color-ts-set-signature: var(--light-color-ts-accessor);
+    --light-color-ts-type-alias: #d51270;
+    /* reference not included as links will be colored with the kind that it points to */
+
+    --light-external-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='10' height='10'><path fill-opacity='0' stroke='%23000' stroke-width='10' d='m43,35H5v60h60V57M45,5v10l10,10-30,30 20,20 30-30 10,10h10V5z'/></svg>");
+    --light-color-scheme: light;
+
+    /* Dark */
+    --dark-color-background: #2b2e33;
+    --dark-color-background-secondary: #1e2024;
+    --dark-color-background-warning: #bebe00;
+    --dark-color-warning-text: #222;
+    --dark-color-icon-background: var(--dark-color-background-secondary);
+    --dark-color-accent: #9096a2;
+    --dark-color-active-menu-item: #5d5d6a;
+    --dark-color-text: #f5f5f5;
+    --dark-color-text-aside: #dddddd;
+    --dark-color-link: #00aff4;
+
+    --dark-color-ts-keyword: #3399ff;
+    --dark-color-ts-project: #e358ff;
+    --dark-color-ts-module: var(--dark-color-ts-project);
+    --dark-color-ts-namespace: var(--dark-color-ts-project);
+    --dark-color-ts-enum: #f4d93e;
+    --dark-color-ts-enum-member: var(--dark-color-ts-enum);
+    --dark-color-ts-variable: #798dff;
+    --dark-color-ts-function: #a280ff;
+    --dark-color-ts-class: #8ac4ff;
+    --dark-color-ts-interface: #6cff87;
+    --dark-color-ts-constructor: var(--dark-color-ts-class);
+    --dark-color-ts-property: var(--dark-color-ts-variable);
+    --dark-color-ts-method: var(--dark-color-ts-function);
+    --dark-color-ts-call-signature: var(--dark-color-ts-method);
+    --dark-color-ts-index-signature: var(--dark-color-ts-property);
+    --dark-color-ts-constructor-signature: var(--dark-color-ts-constructor);
+    --dark-color-ts-parameter: var(--dark-color-ts-variable);
+    /* type literal not included as links will never be generated to it */
+    --dark-color-ts-type-parameter: var(--dark-color-ts-type-alias);
+    --dark-color-ts-accessor: var(--dark-color-ts-property);
+    --dark-color-ts-get-signature: var(--dark-color-ts-accessor);
+    --dark-color-ts-set-signature: var(--dark-color-ts-accessor);
+    --dark-color-ts-type-alias: #ff6492;
+    /* reference not included as links will be colored with the kind that it points to */
+
+    --dark-external-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='10' height='10'><path fill-opacity='0' stroke='%23fff' stroke-width='10' d='m43,35H5v60h60V57M45,5v10l10,10-30,30 20,20 30-30 10,10h10V5z'/></svg>");
+    --dark-color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: var(--light-color-background);
+        --color-background-secondary: var(--light-color-background-secondary);
+        --color-background-warning: var(--light-color-background-warning);
+        --color-warning-text: var(--light-color-warning-text);
+        --color-icon-background: var(--light-color-icon-background);
+        --color-accent: var(--light-color-accent);
+        --color-active-menu-item: var(--light-color-active-menu-item);
+        --color-text: var(--light-color-text);
+        --color-text-aside: var(--light-color-text-aside);
+        --color-link: var(--light-color-link);
+
+        --color-ts-keyword: var(--light-color-ts-keyword);
+        --color-ts-module: var(--light-color-ts-module);
+        --color-ts-namespace: var(--light-color-ts-namespace);
+        --color-ts-enum: var(--light-color-ts-enum);
+        --color-ts-enum-member: var(--light-color-ts-enum-member);
+        --color-ts-variable: var(--light-color-ts-variable);
+        --color-ts-function: var(--light-color-ts-function);
+        --color-ts-class: var(--light-color-ts-class);
+        --color-ts-interface: var(--light-color-ts-interface);
+        --color-ts-constructor: var(--light-color-ts-constructor);
+        --color-ts-property: var(--light-color-ts-property);
+        --color-ts-method: var(--light-color-ts-method);
+        --color-ts-call-signature: var(--light-color-ts-call-signature);
+        --color-ts-index-signature: var(--light-color-ts-index-signature);
+        --color-ts-constructor-signature: var(
+            --light-color-ts-constructor-signature
+        );
+        --color-ts-parameter: var(--light-color-ts-parameter);
+        --color-ts-type-parameter: var(--light-color-ts-type-parameter);
+        --color-ts-accessor: var(--light-color-ts-accessor);
+        --color-ts-get-signature: var(--light-color-ts-get-signature);
+        --color-ts-set-signature: var(--light-color-ts-set-signature);
+        --color-ts-type-alias: var(--light-color-ts-type-alias);
+
+        --external-icon: var(--light-external-icon);
+        --color-scheme: var(--light-color-scheme);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--dark-color-background);
+        --color-background-secondary: var(--dark-color-background-secondary);
+        --color-background-warning: var(--dark-color-background-warning);
+        --color-warning-text: var(--dark-color-warning-text);
+        --color-icon-background: var(--dark-color-icon-background);
+        --color-accent: var(--dark-color-accent);
+        --color-active-menu-item: var(--dark-color-active-menu-item);
+        --color-text: var(--dark-color-text);
+        --color-text-aside: var(--dark-color-text-aside);
+        --color-link: var(--dark-color-link);
+
+        --color-ts-keyword: var(--dark-color-ts-keyword);
+        --color-ts-module: var(--dark-color-ts-module);
+        --color-ts-namespace: var(--dark-color-ts-namespace);
+        --color-ts-enum: var(--dark-color-ts-enum);
+        --color-ts-enum-member: var(--dark-color-ts-enum-member);
+        --color-ts-variable: var(--dark-color-ts-variable);
+        --color-ts-function: var(--dark-color-ts-function);
+        --color-ts-class: var(--dark-color-ts-class);
+        --color-ts-interface: var(--dark-color-ts-interface);
+        --color-ts-constructor: var(--dark-color-ts-constructor);
+        --color-ts-property: var(--dark-color-ts-property);
+        --color-ts-method: var(--dark-color-ts-method);
+        --color-ts-call-signature: var(--dark-color-ts-call-signature);
+        --color-ts-index-signature: var(--dark-color-ts-index-signature);
+        --color-ts-constructor-signature: var(
+            --dark-color-ts-constructor-signature
+        );
+        --color-ts-parameter: var(--dark-color-ts-parameter);
+        --color-ts-type-parameter: var(--dark-color-ts-type-parameter);
+        --color-ts-accessor: var(--dark-color-ts-accessor);
+        --color-ts-get-signature: var(--dark-color-ts-get-signature);
+        --color-ts-set-signature: var(--dark-color-ts-set-signature);
+        --color-ts-type-alias: var(--dark-color-ts-type-alias);
+
+        --external-icon: var(--dark-external-icon);
+        --color-scheme: var(--dark-color-scheme);
+    }
+}
+
+html {
+    color-scheme: var(--color-scheme);
+}
+
+body {
+    margin: 0;
+}
+
+:root[data-theme="light"] {
+    --color-background: var(--light-color-background);
+    --color-background-secondary: var(--light-color-background-secondary);
+    --color-background-warning: var(--light-color-background-warning);
+    --color-warning-text: var(--light-color-warning-text);
+    --color-icon-background: var(--light-color-icon-background);
+    --color-accent: var(--light-color-accent);
+    --color-active-menu-item: var(--light-color-active-menu-item);
+    --color-text: var(--light-color-text);
+    --color-text-aside: var(--light-color-text-aside);
+    --color-link: var(--light-color-link);
+
+    --color-ts-keyword: var(--light-color-ts-keyword);
+    --color-ts-module: var(--light-color-ts-module);
+    --color-ts-namespace: var(--light-color-ts-namespace);
+    --color-ts-enum: var(--light-color-ts-enum);
+    --color-ts-enum-member: var(--light-color-ts-enum-member);
+    --color-ts-variable: var(--light-color-ts-variable);
+    --color-ts-function: var(--light-color-ts-function);
+    --color-ts-class: var(--light-color-ts-class);
+    --color-ts-interface: var(--light-color-ts-interface);
+    --color-ts-constructor: var(--light-color-ts-constructor);
+    --color-ts-property: var(--light-color-ts-property);
+    --color-ts-method: var(--light-color-ts-method);
+    --color-ts-call-signature: var(--light-color-ts-call-signature);
+    --color-ts-index-signature: var(--light-color-ts-index-signature);
+    --color-ts-constructor-signature: var(
+        --light-color-ts-constructor-signature
+    );
+    --color-ts-parameter: var(--light-color-ts-parameter);
+    --color-ts-type-parameter: var(--light-color-ts-type-parameter);
+    --color-ts-accessor: var(--light-color-ts-accessor);
+    --color-ts-get-signature: var(--light-color-ts-get-signature);
+    --color-ts-set-signature: var(--light-color-ts-set-signature);
+    --color-ts-type-alias: var(--light-color-ts-type-alias);
+
+    --external-icon: var(--light-external-icon);
+    --color-scheme: var(--light-color-scheme);
+}
+
+:root[data-theme="dark"] {
+    --color-background: var(--dark-color-background);
+    --color-background-secondary: var(--dark-color-background-secondary);
+    --color-background-warning: var(--dark-color-background-warning);
+    --color-warning-text: var(--dark-color-warning-text);
+    --color-icon-background: var(--dark-color-icon-background);
+    --color-accent: var(--dark-color-accent);
+    --color-active-menu-item: var(--dark-color-active-menu-item);
+    --color-text: var(--dark-color-text);
+    --color-text-aside: var(--dark-color-text-aside);
+    --color-link: var(--dark-color-link);
+
+    --color-ts-keyword: var(--dark-color-ts-keyword);
+    --color-ts-module: var(--dark-color-ts-module);
+    --color-ts-namespace: var(--dark-color-ts-namespace);
+    --color-ts-enum: var(--dark-color-ts-enum);
+    --color-ts-enum-member: var(--dark-color-ts-enum-member);
+    --color-ts-variable: var(--dark-color-ts-variable);
+    --color-ts-function: var(--dark-color-ts-function);
+    --color-ts-class: var(--dark-color-ts-class);
+    --color-ts-interface: var(--dark-color-ts-interface);
+    --color-ts-constructor: var(--dark-color-ts-constructor);
+    --color-ts-property: var(--dark-color-ts-property);
+    --color-ts-method: var(--dark-color-ts-method);
+    --color-ts-call-signature: var(--dark-color-ts-call-signature);
+    --color-ts-index-signature: var(--dark-color-ts-index-signature);
+    --color-ts-constructor-signature: var(
+        --dark-color-ts-constructor-signature
+    );
+    --color-ts-parameter: var(--dark-color-ts-parameter);
+    --color-ts-type-parameter: var(--dark-color-ts-type-parameter);
+    --color-ts-accessor: var(--dark-color-ts-accessor);
+    --color-ts-get-signature: var(--dark-color-ts-get-signature);
+    --color-ts-set-signature: var(--dark-color-ts-set-signature);
+    --color-ts-type-alias: var(--dark-color-ts-type-alias);
+
+    --external-icon: var(--dark-external-icon);
+    --color-scheme: var(--dark-color-scheme);
+}
+
+
+
+/*************************************************************/
+/* Now let's override the default variables use by the theme */
+/*************************************************************/
+
+
+// Typography
+
+// prettier-ignore
+$body-font-family: "Segoe UI", sans-serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+$root-font-size: 16px !default; // DEPRECATED: previously base font-size for rems
+$body-line-height: 1 !default;
+$content-line-height: 1 !default;
+$body-heading-line-height: 1.2 !default;
+
+// Font size
+// `-sm` suffix is the size at the small (and above) media query
+
+$font-size-1: 0.875rem !default;
+$font-size-1-sm: 0.875rem !default;
+$font-size-2: 0.875rem !default; // h4 - uppercased!, h6 not uppercased, text-small
+$font-size-3: 1rem !default; // h5
+$font-size-4: 1.05rem !default;
+$font-size-5: 1.25rem !default; // h3
+$font-size-6: 1.5rem !default; // h2
+$font-size-7: 1.5rem!default;
+$font-size-8: 1.875rem !default; // h1
+$font-size-9: 1.875rem !default;
+$font-size-10: 1.875rem !default;
+$font-size-10-sm: 1.875rem !default;
+
+// Colors
+
+$white: #fff !default;
+$grey-dk-000: #959396 !default;
+$grey-dk-100: #5c5962 !default;
+$grey-dk-200: #44434d !default;
+$grey-dk-250: #302d36 !default;
+$grey-dk-300: #27262b !default;
+$grey-lt-000: #f5f6fa !default;
+$grey-lt-100: #eeebee !default;
+$grey-lt-200: #ecebed !default;
+$grey-lt-300: #e6e1e8 !default;
+$purple-000: #7253ed !default;
+$purple-100: #5e41d0 !default;
+$purple-200: #4e26af !default;
+$purple-300: #381885 !default;
+$blue-000: #2c84fa !default;
+$blue-100: #2869e6 !default;
+$blue-200: #264caf !default;
+$blue-300: #183385 !default;
+$green-000: #41d693 !default;
+$green-100: #11b584 !default;
+$green-200: #009c7b !default;
+$green-300: #026e57 !default;
+$yellow-000: #ffeb82 !default;
+$yellow-100: #fadf50 !default;
+$yellow-200: #f7d12e !default;
+$yellow-300: #e7af06 !default;
+$red-000: #f77e7e !default;
+$red-100: #f96e65 !default;
+$red-200: #e94c4c !default;
+$red-300: #dd2e2e !default;
+
+// Spacing
+
+$spacing-unit: 1rem; // 1rem == 16px
+
+$spacers: (
+  sp-0: 0,
+  sp-1: $spacing-unit * 0.25,
+  sp-2: $spacing-unit * 0.5,
+  sp-3: $spacing-unit * 0.75,
+  sp-4: $spacing-unit,
+  sp-5: $spacing-unit * 1.5,
+  sp-6: $spacing-unit * 2,
+  sp-7: $spacing-unit * 2.5,
+  sp-8: $spacing-unit * 3,
+  sp-9: $spacing-unit * 3.5,
+  sp-10: $spacing-unit * 4,
+) !default;
+$sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+$sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+$sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+$sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+$sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+$sp-6: map-get($spacers, sp-6) !default; // 2    rem == 32px
+$sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
+$sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
+$sp-9: map-get($spacers, sp-9) !default; // 3.5  rem == 56px
+$sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
+
+// Borders
+
+$border: 1px solid !default;
+$border-radius: 4px !default;
+$border-color: var(--color-accent) !default;
+
+// Grid system
+
+$gutter-spacing: $sp-6 !default;
+$gutter-spacing-sm: $sp-4 !default;
+$nav-width: 16.5rem !default;
+$nav-width-md: 15.5rem !default;
+$nav-list-item-height: $sp-6 !default;
+$nav-list-item-height-sm: $sp-8 !default;
+$nav-list-expander-right: true;
+$content-width: 50rem !default;
+$header-height: 3.75rem !default;
+$search-results-width: $content-width - $nav-width !default;
+$transition-duration: 400ms;
+
+// Media queries in pixels
+
+$media-queries: (
+  xs: 20rem,
+  sm: 31.25rem,
+  md: $content-width,
+  lg: $content-width + $nav-width,
+  xl: 87.5rem,
+) !default;
