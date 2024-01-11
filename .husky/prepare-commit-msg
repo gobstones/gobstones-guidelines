@@ -1,0 +1,79 @@
+#!/usr/bin/env sh
+
+# This hook is invoked by git-commit right after preparing
+# the default log message, and before the editor is started.
+
+# It takes one to three parameters.
+
+# The first is the name of the file that contains the commit log message.
+# The second is the source of the commit message, and can be:
+#   * message (if a -m or -F option was given);
+#   * template (if a -t option was given or the configuration option
+#               commit.template is set);
+#   * merge (if the commit is a merge or a .git/MERGE_MSG file exists);
+#   * squash (if a .git/SQUASH_MSG file exists);
+#   * commit (if a -c, -C or --amend option was given)
+# The third is a commit object name if source is commit.
+
+# If the exit status is non-zero, git commit will abort.
+# The purpose of the hook is to edit the message file in place,
+# and it is not suppressed by the --no-verify option. A non-zero
+# exit means a failure of the hook and aborts the commit. It
+# should not be used as a replacement for the pre-commit hook.
+
+# The sample prepare-commit-msg hook that comes with Git removes
+# the help message found in the commented portion of the commit template.
+
+# Load husky
+. "$(dirname -- "$0")/_/husky.sh";
+
+# Read parameters
+COMMIT_MSG_FILE=$1;
+COMMIT_SOURCE=$2;
+SHA1=$3;
+
+# We use this hook to run "cz", that forces the build of a
+# semantic commit message through a prompt.
+
+# Show welcome message
+echo "**************************";
+echo "Generate commit message";
+echo "**************************";
+echo "";
+
+# Check if we are doing an amend
+if [ "$COMMIT_SOURCE" = 'commit' ] && [ -n $SHA1 ]; then
+    # Amends do not call the "cz" command.
+    exit 0;
+fi
+
+# Check if we are doing an squash
+if [ "$COMMIT_SOURCE" = 'squash' ]; then
+    # Squashes should not trigger the cz command.
+    exit 0;
+fi
+
+# Check if we are doing an merge
+if [ "$COMMIT_SOURCE" = 'merge' ]; then
+    # Merging should not trigger the cz command.
+    exit 0;
+fi
+
+# Check if we are using a template
+if [ "$COMMIT_SOURCE" = 'template' ]; then
+    # Cannot use templates, warn the user and fail.
+    echo "Setting a template through -t or commit.template in this project ";
+    echo "has been disabled. Please run a simple commit.\n";
+    exit 1;
+fi
+
+# Check if a message was given
+if [ "$COMMIT_SOURCE" = 'message' ]; then
+    # Cannot use message, warn the user and fail.
+    echo "Setting a message through -m or -F option in this project ";
+    echo "has been disabled. Please run a simple commit.\n";
+    exit 1;
+fi
+
+# Regular commit has been performed, run the command.
+exec < /dev/tty && npx cz --hook || true;
