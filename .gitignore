@@ -1,0 +1,20 @@
+# OS generated files #
+.DS_Store
+Thumbs.db
+.tmp/
+
+# IDE generated file #
+.idea/
+
+# PackageManager specific lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Node generated files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Gnerated folder for site
+dist/

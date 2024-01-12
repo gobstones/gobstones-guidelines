@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+        {% if eleventyNavigation.title != undefined %}
+            {{ eleventyNavigation.title }} |
+        {% elsif eleventyNavigation.key != undefined %}
+            {{ eleventyNavigation.key }} |
+        {% endif %}
+        gobstones-guidelines
+    </title>
+    <meta
+        name="description"
+        property="og:description"
+        content="{{ site.description }}"
+    />
+    <meta
+        name="keywords"
+        content="Gobtones project coding standards and guidelines."
+    />
+    <meta
+        property="og:title"
+        content="{{ eleventyNavigation.title | default: eleventyNavigation.key }}"
+    />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="gobstones-guidelines" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="/js/toc.js" defer></script>
+    <script>
+        // Adjust the base URL to the actual URLs
+        if (location.host === 'gobstones.github.io' && location.protocol === 'http:') {
+            location.protocol = 'https:';
+        }
+    </script>
+</head>

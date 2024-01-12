@@ -1,3 +1,10 @@
+---
+title: Overview
+permalink: /
+eleventyNavigation:
+    key: Overview
+    order: 1
+---
 # Guidelines to contribute to **GobstonesWeb2** development
 
 This repository contains documentation on the platform architecture, design guidelines, ways to contribute, and standards used, related to the development of **GobstonesWeb2**.
@@ -7,7 +14,9 @@ This repository contains documentation on the platform architecture, design guid
 
 If you are planning on contributing to the development of **GobstonesWeb2** in any way, please start by reading the guidelines.
 
-### Find the guidelines start page [**here**](https://gobstones.github.io/gobstones-guidelines)
+**Find the guidelines start page [**here**](./introduction)**
+
+---------------------------------------------------------------------
 
 Be sure to:
 * Understand how **GobstonesWeb2** architecture is organized in different repositories.
@@ -16,5 +25,6 @@ Be sure to:
 * Get to know the project governance chain and communication channels.
 * Maintain the code standards for all projects and code submissions.
 
-If you want to know more about this repository itself, you may read the [about the guidelines](https://gobstones.github.io/gobstones-guidelines/about-guidelines) section in the guidelines.
+---------------------------------------------------------------------
 
+If you want to know more about this repository itself, you may read the [about the guidelines](./about-guidelines) section in the guidelines.

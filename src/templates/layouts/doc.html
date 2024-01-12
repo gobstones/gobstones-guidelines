@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        <div class="navigation">
+            <nav class="navigation">
+                {{ collections.all | eleventyNavigation |
+                eleventyNavigationToHtml }}
+            </nav>
+        </div>
+        <div class="main">
+            <div class="breadcrumb">
+                {{ collections.all | eleventyNavigationBreadcrumb: eleventyNavigation.key, navOptions | eleventyNavigationToHtml }}
+            </div>
+            {{ content }}
+        </div>
+        <div class="toc-container">
+            <strong>On this page:</strong>
+        </div>
+    </div>
+</div>
