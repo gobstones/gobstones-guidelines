@@ -8,7 +8,29 @@ eleventyNavigation:
 ---
 # Coding standards and workflow for **GobstonesWeb2**
 
+If you are going to start developing code you need to understand how projects are organized, how to push code, and what coding standards we use. If you are joining the **Core Team**, or are planning to collaborate as an external developer, you should be sure to understand this section fully.
+
+## Project organization
+
+You should first understand how our projects are organized, what files are there, and what are they for, and how we organize different files in folders. Be sure to read the [**Project organization**](./project-organization) section before starting.
+
+## Naming conventions
+
+No guideline is complete without a proper way to explain how the names of files, variables, classes and others is chosen. Please be ure to read the [**Naming conventions**](./naming-conventions) section before going any further.
+
 ## Workflow
+
+You now understand how projects are organized, great, now what? How do I add new features or correct new bugs? We have detail steps on how to contribute, depending on who you are. If you are an external developer, wanting to contribute to the project, please read the [**Contributing**](./contributing) section. If you have join the **Core Team**, pleade be sure to read the [**Developing**](./developing) section.
+In either case you should read about [**Commit conventions**](./commit-conventions).
+
+## Testing
+
+No contribution or work can be properly finished without proper testing. We use `Jest` to test our code, but we a special way of writing tests altogether. Please be sure to read the section dedicated to [**Testing**](./testing) in order to understand how we write tests.
+
+## Documentation
+
+And of course, if you contribute new code, it has to be documented properly. Please read the section dedicated to [**Documentation**](./documentation) before sending any pull request.
+
 
 ### Module creation
 
