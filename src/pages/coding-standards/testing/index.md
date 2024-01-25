@@ -1,9 +1,8 @@
 ---
 title: Testing
-permalink: /coding-standards/testing
 eleventyNavigation:
     key: Testing
-    parent: Overview
+    parent: Coding Standards
     order: 5
 ---
 # Testing **GobstonesWeb2** projects
@@ -405,6 +404,9 @@ describe('reverse', () => {
     ...
 });
 ```
+
+How to test react components
+
 
 ### Unit test of modules with static objects
 

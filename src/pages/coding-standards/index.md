@@ -1,6 +1,5 @@
 ---
 title: Coding Standards
-permalink: /coding-standards/
 eleventyNavigation:
     key: Coding Standards
     parent: Overview
@@ -20,7 +19,7 @@ No guideline is complete without a proper way to explain how the names of files,
 
 ## Workflow
 
-You now understand how projects are organized, great, now what? How do I add new features or correct new bugs? We have detail steps on how to contribute, depending on who you are. If you are an external developer, wanting to contribute to the project, please read the [**Contributing**](./contributing) section. If you have join the **Core Team**, pleade be sure to read the [**Developing**](./developing) section.
+You now understand how projects are organized, great, now what? How do I add new features or correct new bugs? We have detail steps on how to contribute, depending on who you are. If you are an external developer, wanting to contribute to the project, please read the [**Coding as an External Contributor**](./coding-contributor) section. If you have join the **Core Team**, pleade be sure to read the [**Coding as a Team Member**](./coding-team) section.
 In either case you should read about [**Commit conventions**](./commit-conventions).
 
 ## Testing

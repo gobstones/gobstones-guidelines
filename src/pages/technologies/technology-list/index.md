@@ -1,6 +1,5 @@
 ---
 title: List of Technologies
-permalink: /technologies/technology-list
 eleventyNavigation:
     key: List of Technologies
     parent: Technology
@@ -12,7 +11,7 @@ eleventyNavigation:
 
 Most of these technologies and their configuration are totally or partially abstracted away through the [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module. You should read and understand how that module hides the configuration for some tools, allowing you to override the default in each project by **ejecting** the configuration files, as well as how it provides default configuration files that must be in the root of each project, but that are not meant to be modified, as we expect they are only changed through the tool by **updating** the files as a tool's action.
 
-If you need help configuring the development environment, you may read the [Installation tutorial](./installation-tutorial.md).
+If you need help configuring the development environment, you may read the [Installation tutorial](../installation-tutorial).
 
 -----------------------------------------------------
 
@@ -386,4 +385,4 @@ You do not need to know much about `CommitLint`, but you can read their document
 
 -----------------------------------------------------
 
-To learn about the coding standards and workflow for the mentioned technologies and GobstonesWeb2 in general [consult coding standards and workflow section](../coding-standards/coding-standards.md).
+To learn about the coding standards and workflow for the mentioned technologies and GobstonesWeb2 in general [consult coding standards and workflow section](../../coding-standards).

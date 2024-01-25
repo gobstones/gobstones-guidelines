@@ -1,6 +1,5 @@
 ---
 title: About the guidelines
-permalink: /about-guidelines/
 eleventyNavigation:
     key: About the guidelines
     order: 2
@@ -20,7 +19,7 @@ Although structured as any other project in the Gobstones Platform, and containi
 
 You should not need to know much about `eleventy`, the plugins we use or how the site is structured in order to contribute and write guidelines. Nonetheless you should at least have a grasp of what a **front matter** is, and how it works.
 
-On the root of the project you will find general files, such as `package.json`, `.prettierrc`, `commitlint.config.js` and others, along with the `.husky` and `.github`. If you do not know what they are, you should read the [Technologies](./technologies) section on this same guidelines.
+On the root of the project you will find general files, such as `package.json`, `.prettierrc`, `commitlint.config.js` and others, along with the `.husky` and `.github`. If you do not know what they are, you should read the [Technologies](../technologies) section on this same guidelines.
 
 Beside the aforementioned files, the file `eleventy.config.js` is required for `eleventy` to work. This file holds the configuration of `eleventy` as JavaScript code, and exports a single function, that takes the user configuration object (named `el`) that may be modified as a side effect to add particular requirements to the configuration. The function returns an object, containing mainly the `dir` attribute, specifying the basic directories that `eleventy` will work upon, and the `pathPrefix`, that specifies a possible sub-folder in your hosting.
 

@@ -1,6 +1,5 @@
 ---
 title: Governance
-permalink: /governance/
 eleventyNavigation:
     key: Governance
     parent: Overview
@@ -33,4 +32,4 @@ You can read about how the process of decision making works at the [Decision Mak
 
 Flow of communication guarantees that all contributors are aware of the latest decisions in the project that may affect them. Depending on the needs and on what do you want to communicate, we have different contact channels.
 
-You can read more about how to communicate with the team depending in your needs at the [Contact](./contact.md) section.
+You can read more about how to communicate with the team depending in your needs at the [Contact](./contact) section.

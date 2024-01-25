@@ -1,6 +1,5 @@
 ---
 title: Overview
-permalink: /
 eleventyNavigation:
     key: Overview
     order: 1
@@ -14,7 +13,7 @@ This repository contains documentation on the platform architecture, design guid
 
 If you are planning on contributing to the development of **GobstonesWeb2** in any way, please start by reading the guidelines.
 
-**Find the guidelines start page [**here**](./introduction)**
+**Find the [guidelines start page here](./introduction)**
 
 ---------------------------------------------------------------------
 
@@ -28,3 +27,4 @@ Be sure to:
 ---------------------------------------------------------------------
 
 If you want to know more about this repository itself, you may read the [about the guidelines](./about-guidelines) section in the guidelines.
+

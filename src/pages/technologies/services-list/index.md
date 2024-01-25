@@ -1,6 +1,5 @@
 ---
 title: List of Services
-permalink: /technologies/services-list
 eleventyNavigation:
     key: List of Services
     parent: Technology

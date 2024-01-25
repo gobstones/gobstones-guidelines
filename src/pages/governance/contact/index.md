@@ -1,6 +1,5 @@
 ---
 title: Contact
-permalink: /governance/contact/
 eleventyNavigation:
     key: Contact
     parent: Governance

@@ -1,6 +1,5 @@
 ---
 title: Architecture
-permalink: /architecture/
 eleventyNavigation:
     key: Architecture
     parent: Overview
@@ -14,7 +13,7 @@ In this way, when the team decide to change something on the common configuratio
 
 The architecture of **GobstonesWeb2** is established by the dependencies between the modules provided by the different repositories belonging to the project, as presented in the following diagram:
 
-![GobstonesWeb2 Architecture Diagram](/img/diagram-of-components.svg)
+![GobstonesWeb2 Architecture Diagram](../img/diagram-of-components.svg)
 
 We are currently working in redesigning some of the modules into new grouping. Expect changes on this graphic in the future.
 
@@ -67,7 +66,7 @@ Other configuration files for some tooling, such as `.prettierc` used by `pretti
 
 Finally, the tool allows to run different actions defined through `nps`, by running the `run` subcommand.
 
-You can read more about the tool, configuration files, and tooling in the [Technologies we use](/../technologies/technologies.md) section.
+You can read more about the tool, configuration files, and tooling in the [Technologies we use](../technologies) section.
 
 ## Basic functionalities
 

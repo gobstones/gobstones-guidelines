@@ -1,6 +1,5 @@
 ---
 title: Introduction
-permalink: /introduction/
 eleventyNavigation:
     key: Introduction
     parent: Overview
@@ -21,7 +20,7 @@ The sections are the following:
 Project governance provides direction and defines decision making.
 Flow of communication guarantees that all contributors are aware of the latest decisions in the project that may affect them.
 
-If you want to contribute in any way, even if it's not coding, you should be aware of everything in this section. So be sure to read the [governance](./governance) section so you can learn how do we work, who are we and how to get in touch with us.
+If you want to contribute in any way, even if it's not coding, you should be aware of everything in this section. So be sure to read the [governance](../governance) section so you can learn how do we work, who are we and how to get in touch with us.
 
 ---------------------------------------------------------------------
 
@@ -29,7 +28,7 @@ If you want to contribute in any way, even if it's not coding, you should be awa
 
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities, each module in it's own repository, and with different technologies.
 
-If you are planning on getting deeper into how **GobstonesWeb2** works, and which are the major parts of the system, you should read the [architecture](./architecture) section to know more about all the modules and how they interrelate.
+If you are planning on getting deeper into how **GobstonesWeb2** works, and which are the major parts of the system, you should read the [architecture](../architecture) section to know more about all the modules and how they interrelate.
 
 ---------------------------------------------------------------------
 
@@ -37,7 +36,7 @@ If you are planning on getting deeper into how **GobstonesWeb2** works, and whic
 
 **GobstonesWeb2** is developed in `Typescript` and we use `Node.js` to develop, along several other technologies associated with those.
 
-If you want to contribute with code in any way, or are planning on downloading and running any of the modules on your own, you should read the [technologies](./technologies) section to learn about the technologies we use and how to use them.
+If you want to contribute with code in any way, or are planning on downloading and running any of the modules on your own, you should read the [technologies](../technologies) section to learn about the technologies we use and how to use them.
 
 ---------------------------------------------------------------------
 
@@ -46,4 +45,4 @@ If you want to contribute with code in any way, or are planning on downloading a
 We follow a series of standards when coding and naming elements, and also a specific workflow.
 Please, be sure to follow those standards when contributing to the project.
 
-If you want to contribute with code in any way, please note that we do not accept code that does not follow this standards. So be sure to read the [coding standards](./coding-standards) section to learn about how do we code.
+If you want to contribute with code in any way, please note that we do not accept code that does not follow this standards. So be sure to read the [coding standards](../coding-standards) section to learn about how do we code.

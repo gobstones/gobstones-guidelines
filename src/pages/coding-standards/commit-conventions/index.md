@@ -1,9 +1,8 @@
 ---
-title: Testing
-permalink: /coding-standards/testing
+title: Commit Conventions
 eleventyNavigation:
-    key: Testing
-    parent: Overview
+    key: Commit Conventions
+    parent: Coding Standards
     order: 5
 ---
 # Commit conventions of the **GobstonesWeb2** projects

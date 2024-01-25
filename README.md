@@ -7,7 +7,7 @@ This repository contains documentation on the platform architecture, design guid
 
 If you are planning on contributing to the development of **GobstonesWeb2** in any way, please start by reading the guidelines.
 
-### Find the guidelines start page [**here**](https://gobstones.github.io/gobstones-guidelines)
+### Find the [guidelines start page here](https://gobstones.github.io/gobstones-guidelines)
 
 Be sure to:
 * Understand how **GobstonesWeb2** architecture is organized in different repositories.
