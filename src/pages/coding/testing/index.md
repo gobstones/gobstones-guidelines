@@ -2,7 +2,7 @@
 title: Testing
 eleventyNavigation:
     key: Testing
-    parent: Coding Standards
+    parent: Coding
     order: 5
 ---
 # Testing **GobstonesWeb2** projects
@@ -11,26 +11,14 @@ One of the important aspects of the code you add to any project implies complyin
 
 This section explains how to run the tests, as well as how tests are organized and how to write new tests.
 
------------------------------------------------------
+---------------------------------------------------------------------
 
 ## Running tests
 
-Every project includes a `test` script in their `package.json` file. Running the tests is as easy as executing the script through `npm` by running:
-
-```sh
-npm run test
-```
-
-The default test action consist in calling one of the defined `nps` commands with the name `test`, and `npm start` will run such commands, so the previous command it's simply a rename of the following:
+Every project includes a `test` task in their `nps` configuration. Running the tests is as easy as executing the `gobstones-scripts run` command for the `test` task through `npm` by running:
 
 ```sh
 npm start test
-```
-
-At the very end, `nps` is not even run directly but through `gobstones-scripts`, so if you have `gobstones-scripts` globally installed, the following command will also be equivalent:
-
-```sh
-gobstones-scripts run test
 ```
 
 The actual tool running the tests is `jest`, which by default executes all the tests in the `./test` folder that have a name ending with the `.test.ts` extension.
@@ -49,7 +37,7 @@ npm start test.serve
 
 Static files for the site are always saved in the `./coverage` folder when running the tests, and are deleted and recreated from scratch every time the tests are run. This folder is not preserved anywhere, and only serves the purpose of temporary serving for easier test result navigation.
 
------------------------------------------------------
+---------------------------------------------------------------------
 
 ## Test Types in use
 
@@ -67,8 +55,7 @@ Functional tests are written from the end user's perspective. If unit tests ensu
 
 Integration tests ensure that different modules are working together appropriately. In the more complex modules of the system, there is a need to ensure that different sub-modules are integrated in such a way that the whole expected behavior is met. In such cases, integration tests are used.
 
-
------------------------------------------------------
+---------------------------------------------------------------------
 
 ## Test Suite Organization
 
@@ -90,19 +77,21 @@ We organize tests as files as follows:
 Tests suites code organize their contents (tests) in a particular way also. We got inspiration from the [Gherkin language](https://cucumber.io/docs/gherkin/reference/) and BDD, and we wrote our tests in such a way that they are human readable and can be used as part of the documentation of features and the expected interface. In that sense, we do not use Gherkin nor any domain specific language, but we do exploit **Jest**'s `describe` in order to write more meaningful test suites.
 
 We use the following three exported functions from `@jest/globals`:
+
 * `it`: Used for defining a particular test case. We use it to describe what should happen when a particular method is called, sometimes with a particular input.
 * `expect`: Used to define assertions over a particular value or action. They are used inside tests as to to assert the state in which the system ends after executing some code.
 * `describe`: Used for grouping tests into a cohesive unit. We use it to describe the module or class under test. Defines a test group.
 * `beforeEach`: Used to setup a particular state in the system or objects under a test group before each test is run.
 
 But, we also make use of some aliases of `describe` that allows for more human readable and meaningful tests.
+
 * `given`: Allows us to define a grouping of tests that require a particular initial state. It groups multiple tests, and usually contains a `beforeEach` definition, that sets the state in a particular fashion. It's an alias for `describe`.
 * `when`: Allows us to specify the method or function to test. It's an alias for `describe`.
 * `withInput`: Allows us to specify input data for the particular test or function. It's an alias for `describe`.
 
 Full tests should be read in such a way that combining all the describes, given, when, on and it, makes a coherent text that explains the feature or scenario under testing.
 
-Here are some examples:
+Here is an example:
 
 > **DESCRIBE** Stack
 > **GIVEN** an instance with multiple elements
@@ -121,6 +110,8 @@ Here are some examples:
 >     });
 > });
 > ```
+
+And another one:
 
 > **DESCRIBE** Stack
 > **GIVEN** an instance with multiple elements
@@ -148,8 +139,8 @@ Here are some examples:
 >     });
 > });
 
-
 You can import all of them as follows:
+
 ```ts
 import {
     it, expect, describe,
@@ -169,7 +160,6 @@ The following are common guidelines that you should follow when writing test sui
 * Avoid "should" in your test descriptions. That is, prefer "returns 5" over "should return 5".
 * Use present simple over present continuous. That is, prefer "returns 5" over "returning 5".
 * When doing unit testing, if your module or class is intertwined with others, be sure to use **mocks** to simplify testing and test a single module at a time. Only tet the full behavior if impossible to mock, or if the element under test cannot live without an instance of the other.
-
 
 ### Test examples for particular scenarios
 
@@ -405,14 +395,14 @@ describe('reverse', () => {
 });
 ```
 
-How to test react components
-
+How to test React components
 
 ### Unit test of modules with static objects
 
 Usually, when a module returns an object, that object contains no state that can or should be modified from the exterior. In such cases, we will test the object in a similar way as we test classes, except that there will be no `given` clause, as there are no states that are relevant for the object.
 
 An example of this would be something like:
+
 ```ts
 describe('stringUtilities', () => {
     when('equalsIgnoringCase', () => {
@@ -428,6 +418,7 @@ describe('stringUtilities', () => {
 In some particular scenarios, the state of the object may be important, and may be changed from outside. If that is the case, then you may use `given` clauses to specify a particular state for the object. Do note that, if the object is global, the object will not go back to it's original state after every test run. You should have this in mind when writing such tests, and use the `beforeEach` and `afterEach` or `beforeAll` and `afterAll` in each `given` context to set up the object in a well known state.
 
 An example of this particular case will look like the following:
+
 ```ts
 describe('globalStack', () => {
     given('global stack has two elements', () => {
@@ -445,7 +436,6 @@ describe('globalStack', () => {
 ### Functional tests of modules
 
 Functional tests are a little different than unit tests, as they assert the behavior of a full module, from the perspective of a user, and not the developer. In this tests we will not validate individual methods, but overall interface behavior, thus, ensuring that the overall module behaves as required in a realistic use case scenario.
-
 
 ```ts
 describe('Stack', () => {

@@ -1,0 +1,18 @@
+{
+    // Node and npm configuration
+    "npm.autoDetect": "on",
+    "debug.node.autoAttach": "smart",
+    "files.exclude": {
+        "tsconfig.build.json": true
+    },
+    // Code style, regular and ESLint related
+    "files.trimTrailingWhitespace": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.validate": ["typescript"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": false,
+    // CSpell
+    "cSpell.words": []
+}

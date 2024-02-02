@@ -8,11 +8,7 @@ REMOTE_NAME=$1;
 REMOTE_URL=$2;
 # Read the input and split it approprietly
 INPUT=$(cat);
-INPUT_ARR[0]='';
-INPUT_ARR[1]='';
-INPUT_ARR[2]='';
-INPUT_ARR[3]='';
-read -a INPUT_ARR <<< "$INPUT";
+INPUT_ARR=($INPUT);
 
 LOCAL_REF=${INPUT_ARR[0]}
 LOCAL_OBJ_NAME=${INPUT_ARR[1]}
@@ -27,7 +23,7 @@ set -euo pipefail
 # which provide the name and location of the destination remote,
 # if a named remote is not being used both values will be the same.
 
-# Information about what is to be pushed is provided on the hook`s
+# Information about what is to be pushed is provided on the hook’s
 # standard input with lines of the form:
 # <local ref> SP <local object name> SP <remote ref> SP <remote object name> LF
 
@@ -48,17 +44,6 @@ set -euo pipefail
 # pushing anything. Information about why the push is rejected may be
 # sent to the user by writing to standard error.
 
-# If pushing a tag, generate doc and push them as
-# a "docs" branch in the remote.
-case "$LOCAL_REF" in
-    refs\/tags*)
-        # Apply specific code when publishing tags
-        IS_TAG=1;;
-    *)
-        # Apply specific code when publishing any branch
-        IS_TAG=0;;
-esac
-
 # We currently use this hook to verify that any commit (to any branch)
 # passes the tests configured.
 # If a tag is being pushed, then, we generate the documentation
@@ -75,6 +60,17 @@ echo "";
 
 # Run all the tests
 echo "Running tests";
-npm run test;
+npx --no -- gobstones-scripts run test --silent;
+
+# If pushing a tag, generate doc and push them as
+# a "docs" branch in the remote.
+case "$LOCAL_REF" in
+    refs\/tags*)
+        # Apply specific code when publishing tags
+        echo "\nYour tag is being pushed...\n";;
+    *)
+        # Apply specific code when publishing any branch
+        echo "\nYour branch is being pushed...\n";;
+esac
 
 exit 0;

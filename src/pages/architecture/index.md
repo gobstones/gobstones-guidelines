@@ -6,78 +6,213 @@ eleventyNavigation:
     order: 3
 ---
 # **Architecture of **GobstonesWeb2****
-The architecture of **GobstonesWeb2** combines several modules providing different functionalities
-For each module, there will be a repository in the organization.
-The guidelines ask for all repositories to share a basic configuration structure, and in order to ensure it, there is a special module, in repository [gobstones-scripts](https://github.com/gobstones/gobstones-scripts),that all repositories of **GobstonesWeb2** must depend on and be created by, providing the means to automate such sharing.
-In this way, when the team decide to change something on the common configuration, all repositories can be easily updated.
 
-The architecture of **GobstonesWeb2** is established by the dependencies between the modules provided by the different repositories belonging to the project, as presented in the following diagram:
+The architecture of **GobstonesWeb2** combines several modules providing different functionalities. They all interrelate to conform what is known as the **GobstonesWeb2**, and together with the contents, pedagogic proposals and others conform the **Gobstones Platform**. This section lists all the different modules that compose the architecture, their current status, and how they interrelate.
 
-![GobstonesWeb2 Architecture Diagram](../img/diagram-of-components.svg)
+---------------------------------------------------------------------
+
+## Basic overview of the architecture
+
+For each module, there will be a repository in the organization, that is to say, a GitHub project will be present for the module.
+
+Some modules depend on another, generating a dependency tree. Modules at the bottom of the tree are usually projects that provide utilities and general behavior, while the full application will be at the top of the tree.
+
+> You may be wondering why we chose a polyrepo approach instead of a
+> monorepo one. You may read [A Monorepo vs. polyrepo Summary](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
+> if you don't know what we are talking about.
+>
+> In summary, we believe that polyrepo requires simpler tooling, less
+> mental effort, and allows for new developers to jump in to a project
+> easily. Additionally, not all project of **GobstonesWeb2** are released
+> as the same single package. With that in mind, we reached for a
+> polyrepo approach, and wrote specialized tooling when needed.
+
+Som of the modules are currently available or under development, while others are just stubs because they are planned, but no particular release date is yet defined.
+
+The following is an overview of the projects and their dependencies.
+
+![GobstonesWeb2 Architecture Diagram](../img/architecture/diagram-of-components.svg)
 
 We are currently working in redesigning some of the modules into new grouping. Expect changes on this graphic in the future.
 
-## Details about repositories of GobstonesWeb2
+Most of the modules share a common structure, regarding files present at the root, the tooling used, how you can work with them, etc. Some files such as the "LICENSE" file, or the ".vscode" folder with recommended add-ons for the Visual Studio Code editor are required to live at the root of every project, but they are actually shared across all the modules. To ensure easy management of this, the [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module was created. Most modules in **GobstonesWeb2** depend on the `gobstones-scripts` module.
 
-<details>
-    <summary>
-        <b>Expand full list</b>
-    </summary>
-    <p>
-    The complete list of repositories to be used on **GobstonesWeb2** (either planned or under development).
-    </p>
+---------------------------------------------------------------------
 
-* [`gobstones-admin-dashboard`](https://github.com/gobstones/gobstones-admin-dashboard), a dashboard for the Gobstones server,
-* [`gobstones-assertions`](https://github.com/gobstones/gobstones-assertions), a static and semantic code analyzer for Gobstones language,
-* [`gobstones-blocks`](https://github.com/gobstones/gobstones-blocks), a framework agnostic Gobstones Blockly component,
-* [`gobstones-blocks-react`](https://github.com/gobstones/gobstones-blocks-react), the REACT layer over gobstones-blocks,
-* [`gobstones-board`](https://github.com/gobstones/gobstones-board), a representation for Gobstones boards,
-* [`gobstones-board-react`](https://github.com/gobstones/gobstones-board-react), the REACT layer over the gobstones-board,
-* [`gobstones-code-editor`](https://github.com/gobstones/gobstones-code-editor), a code editor to use with Gobstones,
-* [`gobstones-core`](https://github.com/gobstones/gobstones-core), a set of utility tools used through all GobstonesWeb2 repositories,
-* [`gobstones-ide`](https://github.com/gobstones/gobstones-ide), the IDE component, with the actual environment,
-* [`gobstones-gbb-parser`](https://github.com/gobstones/gobstones-gbb-parser), a parser/printer for GBB (Gobstones Board) file format,
-* [`gobstones-guidelines`](https://github.com/gobstones/gobstones-guidelines), fundamental documentation to contribute to GobstonesWeb2,
-* [`gobstones-lang`](https://github.com/gobstones/gobstones-lang), a compiler for Gobstones language,
-* [`gobstones-lang-def`](https://github.com/gobstones/gobstones-lang-def), a new module that will replace `gobstones-lang-intl` and `gobstones-parser` (currently not in the diagram).
-* [`gobstones-lang-intl`](https://github.com/gobstones/gobstones-lang-intl), translation for Gobstones language built-ins and keywords,
-* [`gobstones-lint`](https://github.com/gobstones/gobstones-lint), a linter for Gobstones language,
-* [`gobstones-markdown-view`](https://github.com/gobstones/gobstones-markdown-view), a markdown viewer for Gobstones,
-* [`gobstones-parser`](https://github.com/gobstones/gobstones-parser), a parser for Gobstones language v3.12,
-* [`gobstones-refactors`](https://github.com/gobstones/gobstones-refactors), a refactoring tool for Gobstones language
-* [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts), common configuration for all GobstonesWeb2 repositories
-* [`gobstones-server`](https://github.com/gobstones/gobstones-server), the Gobstones server,
-* [`gobstones-test`](https://github.com/gobstones/gobstones-test), a unit testing framework for Gobstones language,
-* [`gobstones-typechecker`](https://github.com/gobstones/gobstones-typechecker), a typechecker for Gobstones language.
+## List of Active Projects
 
-</details>
+This is the list of projects of **GobstonesWeb2** that are either published under a stable release, or are under active development.
+
+### ⦿ Gobstones-board
+
+A representation for Gobstones boards.
+
+[![Gobstones-board project page](https://img.shields.io/badge/pp-gobstones--board-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-board) [![License](https://img.shields.io/github/license/gobstones/gobstones-board?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-board/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-board?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-board) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-board?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-board)
+
+### ⦿ Gobstones-board-React
+
+The React layer over the Gobstones-board.
+
+[![Gobstones-board-React project page](https://img.shields.io/badge/pp-gobstones--board--react-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-board-react) [![License](https://img.shields.io/github/license/gobstones/gobstones-board-react?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-board-react/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-board-react?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-board-react) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-board-react?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-board-react)
+
+### ⦿ Gobstones-code-editor
+
+A code editor to use with Gobstones.
+
+[![Gobstones-code-editor project page](https://img.shields.io/badge/pp-gobstones--code--editor-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-code-editor) [![License](https://img.shields.io/github/license/gobstones/gobstones-code-editor?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-code-editor/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-code-editor?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-code-editor) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-code-editor?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-code-editor)
+
+### ⦿ Gobstones-core
+
+A set of utility tools used through all GobstonesWeb2 repositories.
+
+[![Gobstones-core project page](https://img.shields.io/badge/pp-gobstones--core-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-core) [![License](https://img.shields.io/github/license/gobstones/gobstones-core?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-core/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-core?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-core) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-core?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-core)
+
+### ⦿ Gobstones-ide
+
+The IDE component, with the actual environment.
+
+[![Gobstones-ide project page](https://img.shields.io/badge/pp-gobstones--ide-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-ide) [![License](https://img.shields.io/github/license/gobstones/gobstones-ide?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-ide/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-ide?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-ide) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-ide?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-ide)
+
+### ⦿ Gobstones-gbb-parser
+
+A parser/printer for GBB (Gobstones Board) file format.
+
+[![Gobstones-gbb-parser project page](https://img.shields.io/badge/pp-gobstones--gbb--parser-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-gbb-parser) [![License](https://img.shields.io/github/license/gobstones/gobstones-gbb-parser`?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-gbb-parser`/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-gbb-parser`?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-gbb-parser`) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-gbb-parser`?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-gbb-parser`)
+
+### ⦿ Gobstones-guidelines
+
+Fundamental documentation to contribute to GobstonesWeb2.
+
+[![Gobstones-guidelines project page](https://img.shields.io/badge/pp-gobstones--guidelines-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-guidelines) [![License](https://img.shields.io/github/license/gobstones/gobstones-guidelines?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-guidelines/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-guidelines?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-guidelines) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-guidelines?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-guidelines)
+
+### ⦿ Gobstones-lang
+
+A compiler for Gobstones language.
+
+[![Gobstones-lang project page](https://img.shields.io/badge/pp-gobstones--lang-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-lang) [![License](https://img.shields.io/github/license/gobstones/gobstones-lang?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-lang/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-lang?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-lang) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-lang?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-lang)
+
+### ⦿ Gobstones-lang-def
+
+A new module that will replace `gobstones-lang-intl` and `gobstones-parser` (currently not in the diagram).
+
+[![Gobstones-lang-def project page](https://img.shields.io/badge/pp-gobstones--lang--def-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-lang-def) [![License](https://img.shields.io/github/license/gobstones/gobstones-lang-def?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-lang-def/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-lang-def?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-lang-def) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-lang-def?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-lang-def)
+
+### ⦿ Gobstones-lang-intl
+
+Translation for Gobstones language built-ins and keywords.
+
+[![Gobstones-lang-intl project page](https://img.shields.io/badge/pp-gobstones--lang--intl-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-lang-intl) [![License](https://img.shields.io/github/license/gobstones/gobstones-lang-intl?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-lang-intl/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-lang-intl?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-lang-intl) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-lang-intl?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-lang-intl)
+
+### ⦿ Gobstones-markdown-view
+
+A markdown viewer for Gobstones.
+
+[![Gobstones-markdown-view project page](https://img.shields.io/badge/pp-gobstones--markdown--view-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-markdown-view) [![License](https://img.shields.io/github/license/gobstones/gobstones-markdown-view?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-markdown-view/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-markdown-view?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-markdown-view) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-markdown-view?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-markdown-view)
+
+### ⦿ Gobstones-parser
+
+A parser for Gobstones language v3.12.
+
+[![Gobstones-parser project page](https://img.shields.io/badge/pp-gobstones--parser-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-parser) [![License](https://img.shields.io/github/license/gobstones/gobstones-parser?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-parser/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-parser?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-parser) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-parser?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-parser)
+
+### ⦿ Gobstones-scripts
+
+Common configuration for all GobstonesWeb2 repositories.
+
+[![Gobstones-scripts project page](https://img.shields.io/badge/pp-gobstones--scripts-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-scripts) [![License](https://img.shields.io/github/license/gobstones/gobstones-scripts?style=plastic&label=License&logo=open-source-initiative&logoColor=white&color=olivegreen)](https://github.com/gobstones/gobstones-scripts/blob/main/LICENSE) [![Version](https://img.shields.io/github/package-json/v/gobstones/gobstones-scripts?style=plastic&label=Version&logo=git-lfs&logoColor=white&color=crimson)](https://github.com/gobstones/gobstones-scripts) [![API Docs](https://img.shields.io/github/package-json/homepage/gobstones/gobstones-scripts?color=blue&label=API%20Docs&logo=gitbook&logoColor=white&style=plastic)](https://gobstones.github.io/gobstones-scripts)
+
+---------------------------------------------------------------------
+
+## List of Planned Projects
+
+This is the list of projects of **GobstonesWeb2** that are planned or on the roadmap, but that do not yet have a particular release date, nor anyone is currently working on them.
+
+### ⦿ Gobstones-admin-dashboard
+
+A dashboard for the Gobstones server.
+
+[![Gobstones-admin-dashboard project page](https://img.shields.io/badge/pp-gobstones--admin--dashboard-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-admin-dashboard)
+
+### ⦿ Gobstones-assertions
+
+A static and semantic code analyzer for Gobstones language.
+
+[![Gobstones-assertions project page](https://img.shields.io/badge/pp-gobstones--assertions-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-assertions)
+
+### ⦿ Gobstones-blocks
+
+A framework agnostic Gobstones Blockly component.
+
+[![Gobstones-blocks project page](https://img.shields.io/badge/pp-gobstones--blocks-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-blocks)
+
+### ⦿ Gobstones-blocks-React
+
+The React layer over Gobstones-blocks.
+
+[![Gobstones-blocks-React project page](https://img.shields.io/badge/pp-gobstones--blocks--react-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-blocks-react)
+
+### ⦿ Gobstones-lint
+
+A linter for Gobstones language.
+
+[![Gobstones-lint project page](https://img.shields.io/badge/pp-gobstones--lint-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-lint)
+
+### ⦿ Gobstones-refactors
+
+A refactoring tool for Gobstones language.
+
+[![Gobstones-refactors project page](https://img.shields.io/badge/pp-gobstones--refactors-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-refactors)
+
+### ⦿ Gobstones-server
+
+The Gobstones server.
+
+[![Gobstones-server project page](https://img.shields.io/badge/pp-gobstones--server-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-server)
+
+### ⦿ Gobstones-test
+
+A unit testing framework for Gobstones language.
+
+[![Gobstones-test project page](https://img.shields.io/badge/pp-gobstones--test-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-test)
+
+### ⦿ Gobstones-typechecker
+
+A typechecker for Gobstones language.
+
+[![Gobstones-typechecker project page](https://img.shields.io/badge/pp-gobstones--typechecker-blue?style=plastic&label=Repository&logo=github&logoColor=white)](https://github.com/gobstones/gobstones-typechecker)
+
+---------------------------------------------------------------------
 
 ## Repositories configuration
 
-The [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module is used to create other modules for the [GobstonesWeb2] platform, and to abstract away configuration details in all the projects.
+The [`gobstones-scripts`](https://github.com/gobstones/gobstones-scripts) module is used to create other modules for the **GobstonesWeb2** platform, to abstract away configuration details in all the projects and to maintain a common structure of files in all repositories, thus, partially aiding the polyrepo approach and helping in the scaffolding process.
 
-The module can be used as a command line program that allows to create new modules, through the subcommands `create` or `init`. It provides several template for projects, such as creating simple libraries, command line applications and libraries, react components, and simple web components.
+The module can be used as a command line program that allows to create new modules, through the subcommands `create` or `init`. It provides several templates for different types of projects, such as creating simple libraries, command line applications that can be also used as libraries, React components, simple web components, and others.
 
-The project's created have tools such as `typescript`, `rollup`, `nps`, `jest`, `typedoc` and others a development dependencies. In that sense, the modules created do not have direct dependencies for all those tools, having a dev-dependency only on `gobstones-scripts`, which in itself have dependencies on the tools. In that sense the module assumes a flat `node-modules` organization.
+Most of the project's created require tools such as `typescript`, `rollup`, `nps`, `jest`, `typedoc` and others. In that sense, the modules created do not have direct dependencies for all those tools in their declaration file (`package.json``), instead having a dev-dependency only on`Gobstones-scripts`, which in itself have the dependencies on the tools. This allows for a centralized version management of all the tooling, that can be easily overwritten if needed by any project by just adding a different version of the tool into their own declarations.
 
-Some configuration files needed by the tooling, such as `tsconfig.js` or `rollup.config.js`, are abstracted away by the `gobstones-script` module, which holds the configuration files. These configuration files have a default version, but, in case some module requires a particular configuration, these configuration files can be overwritten in the projects, by the subcommand `eject`.
+Some configuration files needed by the tooling, such as `tsconfig.js` or `rollup.config.js`, are abstracted away by the `gobstones-scripts` module, which holds the configuration files. This allows for a less cluttered root for the projects, and also to centralize the process of building, style of the documentation, etc. In case some project requires a particular configuration, these configuration files can be overwritten in the projects, by the subcommand `eject`, which will copy the abstracted files to the project root.
 
-Other configuration files for some tooling, such as `.prettierc` used by `prettier`, or `.eslintrc` used by `ESLint`, are automatically created in the root of the created projects. Those files may require some sort of update as versions of the tooling are updated, or changed, and for that, the subcommand `update` allows for updating such files.
+Other configuration files for some tooling, such as `.prettierc` used by `prettier`, or `.eslintrc` used by `ESLint`, are required unfortunately to be in the project root, as editors such as Visual Studio Code or others expect to find the declaration file in order to provide meaningful hints, code completion and refactoring. This files are usually all the same for every project, and it's cumbersome to create and maintain them all. The `gobstones-scripts` package generate those files when creating new project and can help maintain the same version through the different project through the `update` command, that updates those files if needed. Changes to the files can be made tgo provide customization if any project requires it.
 
-Finally, the tool allows to run different actions defined through `nps`, by running the `run` subcommand.
+Finally, mot projects will require to execute scripts as to automate processes that help in the development, such as starting up a development server, build the project, generate the documentation webpage, run the tests and so on. We make use of `nps`, a task runner that is elegant in it's simplicity. This tool provides just one step over the simple `scripts` section of a `package.json` file, but allowing to declare the scripts into a separate file, usually called `package-scripts.js`. The tool also provides things such as listing the commands, print help, etc. When executing scripts from `nps`, many tools will expect to find the configuration files in the root of the project, instead of the abstracted configuration files provided by `gobstones-scripts`. To make it easy to run and execute the tooling, `gobstones-scripts` provides the `run` subcommand, that executes `nps` commands, but loading the configuration for each tool from the appropriate location (considering also that it may be abstracted, overwritten by the user, etc.).
 
-You can read more about the tool, configuration files, and tooling in the [Technologies we use](../technologies) section.
+Alongside the `run` command, the `gobstones-scripts` module may be used as a library, from which you may obtain the `tasks` object. This object is useful if you so decide to `eject` the configuration file for `nps`, as it provides a simpler way to execute the most common tools, such as `rollup` or `typescript`, and even other `nps` commands, running tasks in parallel or serially, etc.
+
+You can read more about the `gobstones-scripts` project in the [`gobstones-scripts`' repository](https://github.com/gobstones/gobstones-scripts). If you want to know more about the different configuration files and tooling we use, you can read about it in the [Technologies Section](../technologies).
+
+---------------------------------------------------------------------
 
 ## Basic functionalities
 
 Another useful project is [`gobstones-core`](https://github.com/gobstones/gobstones-core), that provides some basic utilities used through different projects.
 
-The project includes things such as the idea for `Event`'s that have typechecking, for throwing events that objects an subscribe to, and some particular data structures or types, such as `BiMap` or `Subset`.
+The project includes things such as the idea for `Event`'s that have typechecking, for throwing events that objects can subscribe to, and some particular data structures or types, such as `BiMap` or `Subset`.
 
-Another utility provided is the `Expectations` module, that allows for setting up expectations to validate user inputs and other stuff.
+Another utility provided is the `Expectations` module, that allows for setting up expectations to validate user inputs and data.
 
-The `SourceReader` module provides a class that allows to provide source files and process them as a stream, reading one or more character at a time. This is useful for tokenizing inputs.
+The `SourceReader` module provides a class that allows to read code agnostic source files and process them as a stream, reading one or more character at a time. This is useful for tokenizing inputs.
 
-This module is required by default in projects created by `gobstones-scripts`, and is required by most projects in used in [GobstonesWeb2].
+This module is required by default in projects created by `gobstones-scripts`, and is required by most projects in used in **GobstonesWeb2**, although it's usage is not mandatory at all.
 
-You can read more about the things the module exports in the [`gobstones-core's README`](https://github.com/gobstones/gobstones-core).
+You can read more about the things the module exports in the [`gobstones-core`'s repository](https://github.com/gobstones/gobstones-core).

@@ -148,7 +148,11 @@ dl,
 menu,
 ol,
 ul {
-    margin: 1em 0;
+    margin: 0;
+}
+
+li {
+    margin: 0.4em 0;
 }
 
 dd {
@@ -158,10 +162,10 @@ dd {
 code,
 pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    padding: 0.2em;
+    padding: 0.15em 0.5em;
     margin: 0;
     font-size: 0.875rem;
-    border-radius: 0.8em;
+    border-radius: 0.6em;
     position: relative;
     background-color: var(--color-inline-code);
 }
@@ -173,10 +177,12 @@ pre {
     padding: 10px;
     border: 1px solid var(--color-accent);
 }
+
 pre code {
     padding: 0;
     font-size: 100%;
 }
+
 
 blockquote {
     margin: 1em 0;
@@ -397,6 +403,7 @@ nav.navigation,
     li {
         padding: 0;
         max-width: 100%;
+        margin: 0;
     }
 
     a {
@@ -472,5 +479,46 @@ nav.navigation {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+/** ============== Contact Cards ============== **/
+
+.contact-card {
+    display: flex;
+    flex-flow: row;
+    border: 1px solid var(--color-accent);
+    border-radius: 1em;
+    padding: 10px 30px;
+    margin: 10px;
+
+    img {
+        max-width: 100px;
+        max-height: 100px;
+        border: 1px solid var(--color-accent);
+        border-radius: 100%;
+        flex: 1;
+    }
+    div {
+        margin-left: 1em;
+    }
+    h3 {
+        font-size: 1.2rem;
+        margin: 0.2em 0;
+    }
+    h4 {
+        font-size: 1rem;
+        margin: 0;
+        color: var(--color-accent);
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    a {
+        color: var(--color-link);
+    }
+    a:hover {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }

@@ -22,6 +22,6 @@ jobs:
             - name: Installing project dependencies
               run: npm install
             - name: Test the code
-              run: npm test
+              run: npm start test
               env:
                   CI: true

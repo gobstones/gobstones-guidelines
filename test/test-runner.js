@@ -2,8 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const process = require('process');
 const { rimraf } = require('rimraf');
-const { execSync } = require('child_process')
-const chalk = require('ansi-colors')
+const { execSync } = require('child_process');
+const chalk = require('ansi-colors');
+
+const verifyLinks = require('./verify-links.test');
 
 function switchCurrentLocationToProjectRoot() {
     let dir = process.cwd();
@@ -17,42 +19,60 @@ function switchCurrentLocationToProjectRoot() {
     }
 }
 
-function generateLinkinatorReport() {
-    console.log('Building the site...');
-    rimraf('./dist');
+function buildProject() {
+    rimraf(verifyLinks.distFolder);
     execSync('npx @11ty/eleventy');
-    console.log('Analizying links...');
-    execSync('npx linkinator "./dist/**/*.html" --format json > ./dist/test-results.json');
+    execSync(`npx linkinator "${verifyLinks.distFolder}/**/*${verifyLinks.distFileExtension}" --format json > ${verifyLinks.fileLocation}`);
     execSync('sleep 1');
-    const results = JSON.parse(fs.readFileSync('./dist/test-results.json'));
-    rimraf('./dist');
-    return results;
 }
 
-function processResultsIntoTestStatus(results) {
+function cleanProject() {
+    rimraf(verifyLinks.distFolder);
+}
+
+function generateLinkinatorReport() {
+    const results = JSON.parse(fs.readFileSync(verifyLinks.fileLocation));
     let allPassed = true;
     const linksPerDoc = {};
     const documents = [];
     for (const link of results.links) {
+        const distNoStarting = verifyLinks.distFolder.replace('./', '');
+
         // Avoid unnamed file links
         if (!link.parent) continue;
         // Avoid navigation links, global style and others to be considered
         if (
-            link.parent === 'dist/index.html' &&
-            !link.url.startsWith('dist') &&
+            link.parent === `${distNoStarting}/index.html` &&
+            !link.url.startsWith(distNoStarting) &&
             !link.url.match(/^(?:[a-z+]+:)?\/\//i)
         ) {
             continue;
         }
         // Process link
-        const docName = link.parent.replace('dist/', './src/pages/').replace('.html', '.md');
+        const docName =
+            link.parent
+                .replace(`${distNoStarting}/`, `${verifyLinks.srcFolder}/`)
+                .replace(verifyLinks.distFileExtension, verifyLinks.srcFileExtension);
         let url = link.url;
         if (!url.match(/^(?:[a-z+]+:)?\/\//i)) {
             url = path.relative(path.dirname(link.parent), link.url);
             if (!url.startsWith('.')) {
-                url = './' + url;
+                url = `./${url}`;
             }
         }
+        // Eliminate excluded urls
+        let isExcluded = false;
+        for (const exclusion of verifyLinks.excludedUrls) {
+            if (url.startsWith(exclusion)) {
+                isExcluded = true;
+                break;
+            }
+        }
+        if (isExcluded) {
+            continue;
+        }
+
+        // Add to the results
         if (!linksPerDoc[docName]) {
             linksPerDoc[docName] = { passed: true, links: [] };
         }
@@ -62,9 +82,17 @@ function processResultsIntoTestStatus(results) {
             status: link.status,
             state: link.state
         });
-        // Fix errors due to permissions in github, as we want to link to
-        // private repos
-        if (url.startsWith('https://github.com') && link.status !== 200) {
+
+        // Ignored links are always marked as 200
+        let isIgnoredError = false;
+        for (const exclusion of verifyLinks.ignoreErrorUrls) {
+            if (url.startsWith(exclusion)) {
+                isIgnoredError = true;
+                break;
+            }
+        }
+
+        if (isIgnoredError && link.status !== 200) {
             linksPerDoc[docName].links[ linksPerDoc[docName].links.length-1].status = 200;
             linksPerDoc[docName].links[ linksPerDoc[docName].links.length-1].state = 'OK';
         } else {
@@ -132,9 +160,12 @@ function printTestResults(testStatus) {
 
 function runTests() {
     switchCurrentLocationToProjectRoot();
-    let testStatus = processResultsIntoTestStatus(generateLinkinatorReport());
+    buildProject();
+
+    let testStatus = generateLinkinatorReport();
     printTestResults(testStatus);
-    process.exit(testStatus.passed ? 0 : 1);
+    cleanProject();
+    process.exitCode = testStatus.passed ? 0 : 1;
 }
 
 runTests();

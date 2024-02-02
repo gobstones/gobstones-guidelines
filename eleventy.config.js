@@ -2,7 +2,6 @@ const isCi = require('is-ci');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownItReplaceLink = require('markdown-it-replace-link');
 
 const EleventySassPlugin = require('eleventy-sass');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
@@ -42,23 +41,6 @@ module.exports = function (el) {
                 assistiveText: title => `Permalink to “${title}”`,
                 visuallyHiddenClass: 'hidden'
             })
-        })
-        .use(markdownItReplaceLink, {
-            /*
-            replaceLink: function (link, env, token, htmlToken) {
-                if (link.match(/^(?!www\.|(?:http|ftp|mailto)s?:\/\/|[A-Za-z]:\\|\/\/).* /)) {
-                    if (env.permalink.startsWith('/governance')) {
-                        console.log(env);
-                        console.log(token);
-                        console.log(htmlToken);
-                    }
-                    const updated = `${pathPrefix}${link.startsWith('/') ? '' : '/'}${link}`;
-                    // console.log(`Updating link: ${link} -> ${updated}`);
-                    return link;
-                }
-                return link;
-            }
-            */
         })
     );
 
