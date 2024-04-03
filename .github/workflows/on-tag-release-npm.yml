@@ -1,0 +1,28 @@
+name: on-tag-release-npm
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    publish-into-npm:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup node version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Installing project dependencies
+              run: npm install
+            - name: Building the project
+              run: npm start build
+            - name: Publishing to NPM
+              uses: JS-DevTools/npm-publish@v3
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+                  access: 'public'

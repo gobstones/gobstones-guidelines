@@ -1,0 +1,31 @@
+name: on-tag-release-github
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    publish-into-github:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup node version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Installing project dependencies
+              run: npm install
+            - name: Building the project
+              run: npm start build
+            - name: Create Release on GitHub
+              uses: ncipollo/release-action@v1
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  tag: ${{ github.ref_name }}
+                  name: Release ${{ github.ref_name }}
+                  allowUpdates: true
+                  body: ${{ github.event.head_commit.message }}

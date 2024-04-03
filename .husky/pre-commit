@@ -48,5 +48,9 @@ npx --no gobstones-scripts run changelog --silent ;
 echo "\nAdd generated files to commit\n";
 git add --all;
 
+# Run license
+echo "\nAdd license text to code files\n";
+npx --no gobstones-scripts run license --silent ;
+
 # Exit
 exit 0;

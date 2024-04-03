@@ -1,5 +1,5 @@
 {
-    "printWidth": 100,
+    "printWidth": 120,
     "tabWidth": 4,
     "useTabs": false,
     "semi": true,
@@ -8,64 +8,93 @@
     "trailingComma": "none",
     "overrides": [
         {
-            "files": ["*.js", "**/*.js", "*.jsx", "**/*.jsx"],
+            "files": [
+                "*.js",
+                "**/*.js",
+                "*.jsx",
+                "**/*.jsx"
+            ],
             "options": {
                 "parser": "babel"
             }
         },
         {
-            "files": ["*.ts", "**/*.ts", "*.tsx", "**/*.tsx"],
+            "files": [
+                "*.ts",
+                "**/*.ts",
+                "*.tsx",
+                "**/*.tsx"
+            ],
             "options": {
                 "parser": "typescript"
             }
         },
         {
-            "files": ["*.yml", "**/*.yml", "*.yaml", "**/*.yaml"],
+            "files": [
+                "*.yml",
+                "**/*.yml",
+                "*.yaml",
+                "**/*.yaml"
+            ],
             "options": {
                 "parser": "yaml"
             }
         },
         {
-            "files": ["*.json", "**/*.json"],
+            "files": [
+                "*.json",
+                "**/*.json"
+            ],
             "options": {
                 "parser": "json"
             }
         },
         {
-            "files": ["*.md", "**/*.md"],
+            "files": [
+                "*.md",
+                "**/*.md"
+            ],
             "options": {
                 "parser": "markdown"
             }
         },
         {
-            "files": ["*.css", "**/*.css", "*.scss", "**/*.scss", "*.less", "**/*.less"],
+            "files": [
+                "*.css",
+                "**/*.css",
+                "*.scss",
+                "**/*.scss",
+                "*.less",
+                "**/*.less"
+            ],
             "options": {
                 "parser": "css"
             }
         },
         {
-            "files": ["*.html", "**/*.html"],
+            "files": [
+                "*.html",
+                "**/*.html"
+            ],
             "options": {
                 "parser": "html"
             }
         },
         {
-            "files": ["package.json"],
+            "files": [
+                "package.json"
+            ],
             "options": {
                 "tabWidth": 2,
                 "parser": "json"
             }
         },
         {
-            "files": ["**/package-definition.json"],
+            "files": [
+                ".prettierrc"
+            ],
             "options": {
                 "tabWidth": 2,
-                "parser": "json"
-            }
-        },
-        {
-            "files": [".prettierrc"],
-            "options": {
                 "parser": "json"
             }
         }

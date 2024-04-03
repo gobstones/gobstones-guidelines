@@ -35,7 +35,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@11ty/eleventy-server-browsersync": "^1.0.2",
-    "@gobstones/gobstones-scripts": "^0.7.2",
+    "@gobstones/gobstones-scripts": "^0.8.2",
     "eleventy-sass": "^2.2.1",
     "husky": "^8.0.3",
     "linkinator": "^6.0.4",

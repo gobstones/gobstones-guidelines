@@ -1,9 +1,9 @@
-# OS generated files #
+# OS generated files
 .DS_Store
 Thumbs.db
 .tmp/
 
-# IDE generated file #
+# IDE generated file
 .idea/
 
 # PackageManager specific lock files
@@ -16,5 +16,16 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-# Gnerated folder for site
+# Build process generated files
+.rollup.cache
+tsconfig.build.json
+
+# Test coverage generated folder
+coverage/
+
+# Dist generated folder
 dist/
+
+# Docs generated folder
+docs/
+

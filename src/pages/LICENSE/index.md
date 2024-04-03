@@ -1,3 +1,10 @@
+---
+title: LICENSE
+eleventyNavigation:
+    key: LICENSE
+    order: 2
+---
+<!-- markdownlint-disable -->
 # GOBSTONES LICENSE
 
 Copyright (C) National University of Quilmes 2018-2024

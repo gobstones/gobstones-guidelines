@@ -71,6 +71,17 @@ const defaultConfiguration = {
                 description: 'Generate changelog based on tags, starting from scratch',
                 hiddenFromHelp: true
             },
+        },
+
+        license: {
+            script: tasks.license(),
+            hiddenFromHelp: true,
+            description: 'Add license information to all code files in the project',
+            remove: {
+                script: tasks.license('remove'),
+                hiddenFromHelp: true,
+                description: 'Add license information to all code files in the project'
+            }
         }
     }
 };

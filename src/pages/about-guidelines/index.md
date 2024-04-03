@@ -2,7 +2,7 @@
 title: About guidelines
 eleventyNavigation:
     key: About guidelines
-    order: 2
+    order: 3
 ---
 # About guidelines
 

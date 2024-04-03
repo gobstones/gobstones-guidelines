@@ -16,8 +16,7 @@ Most of the projects that work as libraries are created from the [`gobstones-scr
 * library
 * cliLibrary
 * reactLibrary
-* webLibrary
-* nonManaged
+* noCode
 
 Other projects that work as full fledge React applications are created using [`create-react-app`](https://create-react-app.dev) while backend manager is created using [`payload`](https://payloadcms.com). Other more strange projects may exist, like this [guidelines project](../../about-guidelines/).
 
