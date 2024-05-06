@@ -58,17 +58,33 @@ Semicolons are mandatory and we make use of `===` comparison, instead of simple 
 
 Regarding spacing, we make use of 4 spaces instead of 2.
 
-### Filenames
+### Files and folders naming conventions
 
 We use the following conventions:
 
-* If your file exposes a single class, name the file as the class, using `PascalCase` (e.g. `DataReader.ts`)
+#### For folders
+
+* Folders at top level folders such as `src`, `test`, `stories`, and similar, are always named starting in lowercase, and using `kebab-case` if needed (e.g. `project-types`).
+* Folders other than top level folders represent modules. Thus, they should be named with `PascalCase`.
+
+#### For filenames
+
 * If your file exposes a single function, name the file as the function, using `camelCase` (e.g. `isEmptyArray.ts`).
-* If your file exposes multiple elements, use `kebab-case` (e.g. `string-utils.ts`).
-* React components are always named after the component, thus, using `PascalCase` (e.g. `ContactCard.tsx`).
+* If your file exposes a single class, name the file as the class, using `PascalCase` (e.g. `DataReader.ts`). Use singular for such names.
+* If your file exposes multiple elements, use `PascalCase` (e.g. `StringUtils.ts`). Prefer plural for such files when possible.
+
+#### For React components
+
+* React components are always named after the component, thus, using `PascalCase` (e.g. `ContactCard.tsx`). Use singular for such names.
 * React components adjacent file (such as the component style or similar) should be name as per the component  (e.g. `ContactCard.scss` if the component is named `ContactCard.tsx`).
-* Folders should be named with similar regards. If the folder exposes a module with multiple elements, use `kebab-case`, but if it "mainly" exposes a single class or function, use `PascalCase` or `camelCase`.
 * In the case of React components, use a folder per component, with the name of the component in `PascalCase`.
+
+#### Others
+
+Some projects may have more specific conventions, such as the
+`gobstones-guidelines` project, that requires the use of `kebab-case`
+for folders to match URLs. Read each project documentation to check
+if there is any additional expectation on the conventions applied.
 
 ---------------------------------------------------------------------
 

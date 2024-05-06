@@ -15,9 +15,9 @@ module.exports = function (el) {
      * Copy your _assets elements directly to a subfolder or
      * file in the output. You may add more files if required.
      */
-    el.addPassthroughCopy('src/css');
-    el.addPassthroughCopy('src/js');
-    el.addPassthroughCopy('src/img');
+    el.addPassthroughCopy('src/assets/css');
+    el.addPassthroughCopy('src/assets/js');
+    el.addPassthroughCopy('src/assets/img');
     el.addPassthroughCopy('src/favicon.ico');
 
     /*

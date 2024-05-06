@@ -5,11 +5,10 @@
 
     <title>
         {% if eleventyNavigation.title != undefined %}
-            {{ eleventyNavigation.title }} |
+            {{ eleventyNavigation.title }} | gobstones-guidelines
         {% elsif eleventyNavigation.key != undefined %}
-            {{ eleventyNavigation.key }} |
+            {{ eleventyNavigation.key }} | gobstones-guidelines
         {% endif %}
-        gobstones-guidelines
     </title>
     <meta
         name="description"
@@ -28,9 +27,9 @@
     <meta property="og:site_name" content="gobstones-guidelines" />
     <meta name="twitter:card" content="summary" />
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <script src="/js/toc.js" defer></script>
+    <script src="/assets/js/toc.js" defer></script>
     <script>
         // Adjust the base URL to the actual URLs
         if (location.host === 'gobstones.github.io' && location.protocol === 'http:') {

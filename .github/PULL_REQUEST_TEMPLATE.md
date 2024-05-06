@@ -1,7 +1,7 @@
 ## Gobstones
 
 Thank you for contributing! Please take a moment to review our
-[**guidelines**](https://github.com/gobstones/gobstones-guidelines) to make the
+[**guidelines**](https://gobstones.github.io/gobstones-guidelines/) to make the
 process easy and effective for everyone involved.
 
 **Please open an issue** before embarking on any significant pull request,
@@ -11,7 +11,7 @@ merged into the project.
 
 Before opening a pull request, please ensure:
 
--   [ ] You have followed our [**guidelines**](https://github.com/gobstones/gobstones-guidelines)
+-   [ ] You have followed our [**guidelines**](https://gobstones.github.io/gobstones-guidelines/)
 -   [ ] Double-check your branch is based on `main` and targets `main`
 -   [ ] Pull request has tests (we are going for 100% coverage!)
 -   [ ] Code is well-commented, linted and follows project conventions
@@ -25,4 +25,4 @@ as possible.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project
 owners to license your work under the terms of our
-[License](https://github.com/gobstones/gobstones-guidelines/blob/main/LICENSE).
+[License](https://gobstones.github.io/gobstones-guidelines/LICENSE/).

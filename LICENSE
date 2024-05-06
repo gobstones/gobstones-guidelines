@@ -13,19 +13,42 @@ of the GNU Affero General Public License version 3.
 
 # ADDITIONAL TERMS
 
-This program is free software. You may redistribute it and/or modify it solely under the terms of the GNU Affero General Public License (AGPL) version 3 published by the Free Software Foundation available at http://www.gnu.org/licenses/agpl-3.0.html and under the conditions detailed here.
+This program is free software. You may redistribute it and/or modify it solely
+under the terms of the GNU Affero General Public License (AGPL) version 3
+published by the Free Software Foundation available at
+http://www.gnu.org/licenses/agpl-3.0.html and under the conditions detailed
+here.
 
-This program is distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+This program is distributed WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-Any copy of the program that you propagate should include the "Non-Certified Software and/or Service" notice clearly visible in the user interface and can not use the Gobstones name, logo, brand and/or denomination, as long as your copies of the program remain uncertified. Any copy of the program that you convey should also present the "Non-Certified Software and/or Service" notice and is prohibited to use of the Gobstones name, logo, brand and/or denomination, even if your copy is certified.
+Any copy of the program that you propagate should include the "Non-Certified
+Software and/or Service" notice clearly visible in the user interface and can
+not use the Gobstones name, logo, brand and/or denomination, as long as your
+copies of the program remain uncertified. Any copy of the program that you
+convey should also present the "Non-Certified Software and/or Service" notice
+and is prohibited to use of the Gobstones name, logo, brand and/or denomination,
+even if your copy is certified.
 
-To certify your copies of the software you may contact the National University of Quilmes by email at gobstones@unq.edu.ar or by postal mail at the Rectorate of the National University of Quilmes, Roque Sáenz Peña 352, Bernal, Buenos Aires, Argentina (B1876BXD).
+To certify your copies of the software you may contact the National University
+of Quilmes by email at gobstones@unq.edu.ar or by postal mail at the Rectorate
+of the National University of Quilmes, Roque Sáenz Peña 352, Bernal, Buenos
+Aires, Argentina (B1876BXD).
 
-Gobstones is a trademark of the National University of Quilmes. Is explicitly prohibited any use of the Gobstones brand, name, logo, and/or denomination and of any other brand of the National University of Quilmes without the explicit permission and authorization granted by the university in written form.
+Gobstones is a trademark of the National University of Quilmes. Is explicitly
+prohibited any use of the Gobstones brand, name, logo, and/or denomination and
+of any other brand of the National University of Quilmes without the explicit
+permission and authorization granted by the university in written form.
 
-The use of the name of the National University of Quilmes and/or of the authors of the covered work or associated materials to either promote, advertise and/or sell non certified copies of the software is explicitly prohibited.
+The use of the name of the National University of Quilmes and/or of the authors
+of the covered work or associated materials to either promote, advertise and/or
+sell non certified copies of the software is explicitly prohibited.
 
-Interactive user interfaces in modified source and object code versions of Gobstones, whether text or graphical, must display appropriate legal notices with reference to the GNU Affero Public License version 3 and to this Additional Terms. You may find a full copy of the license with the additional terms at [https://gobstones.github.io/gobstones-guidelines/LICENSE](https://gobstones.github.io/gobstones-guidelines/LICENSE).
+Interactive user interfaces in modified source and object code versions of
+Gobstones, whether text or graphical, must display appropriate legal notices
+with reference to the GNU Affero Public License version 3 and to this Additional
+Terms. You may find a full copy of the license with the additional terms at
+[https://gobstones.github.io/gobstones-guidelines/LICENSE](https://gobstones.github.io/gobstones-guidelines/LICENSE).
 
 
 # GNU AFFERO GENERAL PUBLIC LICENSE

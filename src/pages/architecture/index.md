@@ -31,7 +31,7 @@ Som of the modules are currently available or under development, while others ar
 
 The following is an overview of the projects and their dependencies.
 
-![GobstonesWeb2 Architecture Diagram](../img/architecture/diagram-of-components.svg)
+![GobstonesWeb2 Architecture Diagram](../assets/img/architecture/diagram-of-components.svg)
 
 We are currently working in redesigning some of the modules into new grouping. Expect changes on this graphic in the future.
 
