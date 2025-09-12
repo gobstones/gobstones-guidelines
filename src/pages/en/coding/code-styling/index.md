@@ -21,7 +21,7 @@ You will find also that many of the styling rules are enforced by the linter, th
 
 We use `camelCase` for all our variables, parameters, functions and method identifiers, for the most part. We have some particular cases needed to be considered.
 
-We expect you to use the appropriate visibility modifiers, either `private`, `protected` or `public` in class methods and attributes. In non class elements, remember that each file is treated a module on their own, so only exported members will be visible. TypeScript does not provide a module/package level visibility modifier, but you can mark a particular element as internal through the use of documentation. By default, the TypeScript compiler configuration we use will strip all internal elements so they cannot be used by third party users of our library.
+We expect you to use the appropriate visibility modifiers, either `private`, `protected` or `private` in class methods and attributes. In non class elements, remember that each file is treated a module on their own, so only exported members will be visible. TypeScript does not provide a module/package level visibility modifier, but you can mark a particular element as internal through the use of documentation. By default, the TypeScript compiler configuration we use will strip all internal elements so they cannot be used by third party users of our library.
 
 ```ts
 /** @internal */

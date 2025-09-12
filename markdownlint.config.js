@@ -66,7 +66,7 @@ module.exports = {
     'no-space-in-code': true,
     'no-space-in-links': true,
     'fenced-code-language': {
-        allowed_languages: ['sh', 'ts', 'yaml', 'json'],
+        allowed_languages: ['sh', 'ts', 'yaml', 'json', 'mermaid'],
         language_only: true
     },
     'first-line-heading': {
