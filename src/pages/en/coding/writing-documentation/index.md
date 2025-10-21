@@ -1,10 +1,12 @@
 ---
 title: Writing Documentation
+lang: en
 eleventyNavigation:
     key: Writing Documentation
     parent: Coding
     order: 6
 ---
+
 # Writing Documentation
 
 An important aspect about any code is it's documentation. We know that writing test cases and documentation usually takes even more time than writing the code itself, but we aim to produce a premium quality software. In that sense, we encourage all of our developers to produce documentation that is accurate, understandable and up to date.

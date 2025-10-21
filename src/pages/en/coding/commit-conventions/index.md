@@ -1,10 +1,12 @@
 ---
 title: Commit Conventions
+lang: en
 eleventyNavigation:
     key: Commit Conventions
     parent: Coding
     order: 3
 ---
+
 # Commit conventions of the **GobstonesWeb2** projects
 
 We have decided to embrace [GitHub Flow](https://githubflow.github.io) with some modifications, as well as [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) in all our projects. This section describes such conventions and will help you to understand how to work in a collaborative environment in the **GobstonesWeb2** projects.
@@ -60,6 +62,7 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 The basic idea behind conventional commits is that commit messages should convey meaning, and thus, should follow a particular structure. The basic structure is:
 
 <!-- markdownlint-disable fenced-code-language -->
+
 ```
 <type>[optional scope]: <description>
 
@@ -67,6 +70,7 @@ The basic idea behind conventional commits is that commit messages should convey
 
 [optional footer(s)]
 ```
+
 <!-- markdownlint-enable fenced-code-language -->
 
 The `type` is meant to explain what the main purpose of the commit is, and may be any of:
@@ -83,7 +87,7 @@ The `type` is meant to explain what the main purpose of the commit is, and may b
 
 If a commit creates incompatible changes with the existing API, that is, it makes the code non backwards compatible, you should add a **BREAKING CHANGE** footer, and in that case, add a description of what changed in your body.
 
-The `scope`` should be used in case where there are clearly defined submodules in the system, and your code affects only one of such modules. The`description` should be no longer than 80 characters, and be as clear and concise as possible. Use the `body` to further explain the meaning of the commit if needed.
+The `scope`` should be used in case where there are clearly defined submodules in the system, and your code affects only one of such modules. The`description`should be no longer than 80 characters, and be as clear and concise as possible. Use the`body` to further explain the meaning of the commit if needed.
 
 Ideally, you are creating code because you have previously stated the work to be done to the rest of the team and the community, and as such, there is a corresponding **Issue** in the project assigned to you. In such a case, you should state in your commit message that the commit resolves a particular feature, or fixes a particular bug. This is achieved by using the word `fix` followed by a hah and the number of the issue being solved (e.g. `fix #71`). Do use this convention in order to automatically close issues and simplify development process.
 

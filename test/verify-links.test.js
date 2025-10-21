@@ -5,5 +5,5 @@ module.exports = {
     srcFolder: './src/pages',
     srcFileExtension: '.md',
     excludedUrls: [],
-    ignoreErrorUrls: ['https://github.com', 'https://gobstones.github.io'],
-}
+    ignoreErrorUrls: ['https://github.com', 'https://gobstones.github.io']
+};

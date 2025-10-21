@@ -1,10 +1,12 @@
 ---
 title: Project Organization
+lang: en
 eleventyNavigation:
     key: Project Organization
     parent: Coding
     order: 1
 ---
+
 # Project Organization
 
 The first thing to understand is how projects are organized in terms of the file system, that is to say, get to know which files are there and what are they for.

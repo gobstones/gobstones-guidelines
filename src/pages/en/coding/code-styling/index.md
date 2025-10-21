@@ -1,10 +1,12 @@
 ---
 title: Code Styling
+lang: en
 eleventyNavigation:
     key: Code Styling
     parent: Coding
     order: 2
 ---
+
 # Code Styling
 
 In big open source project's is difficult to allow multiple people contribute letting everyone have their own style. Thus, we try to enforce many styling conventions in out projects, as well as make use of some design patterns, as to make the experience of coding more pleasant to everyone.
@@ -76,7 +78,7 @@ We use the following conventions:
 #### For React components
 
 * React components are always named after the component, thus, using `PascalCase` (e.g. `ContactCard.tsx`). Use singular for such names.
-* React components adjacent file (such as the component style or similar) should be name as per the component  (e.g. `ContactCard.scss` if the component is named `ContactCard.tsx`).
+* React components adjacent file (such as the component style or similar) should be name as per the component (e.g. `ContactCard.scss` if the component is named `ContactCard.tsx`).
 * In the case of React components, use a folder per component, with the name of the component in `PascalCase`.
 
 #### Others

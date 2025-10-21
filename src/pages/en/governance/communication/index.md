@@ -1,10 +1,12 @@
 ---
 title: Communication
+lang: en
 eleventyNavigation:
     key: Communication
     parent: Governance
     order: 2
 ---
+
 # Communication
 
 Depending on the needs and on what do you want to communicate, we have different contact channels.

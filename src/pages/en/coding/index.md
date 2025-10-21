@@ -1,10 +1,12 @@
 ---
 title: Coding
+lang: en
 eleventyNavigation:
     key: Coding
     parent: Overview
     order: 5
 ---
+
 # Coding standards and workflow for **GobstonesWeb2**
 
 If you are going to start developing code you need to understand how projects are organized, how to push code, and what coding standards we use. If you are joining the **Core Team**, or are planning to collaborate as an external developer, you should be sure to understand this section fully.

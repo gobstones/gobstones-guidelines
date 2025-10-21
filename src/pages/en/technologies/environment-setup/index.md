@@ -1,10 +1,12 @@
 ---
 title: Environment Setup
+lang: en
 eleventyNavigation:
     key: Environment Setup
     parent: Technologies
     order: 3
 ---
+
 # Environment Setup
 
 Setting up a working environment for coding is not always easy, so this section is intended to guide you through such setup. We provide guides for different operating systems, and then some additional steps that are common to all systems.
@@ -204,7 +206,7 @@ To download and execute existing projects from **GobstonesWeb2** you should clon
 Then clone it using your terminal. Navigate to the location you want to download the project and execute:
 
 ```sh
-git clone git@github.com:gobstones/<project-name>.git
+git clone git@github.com:gobstones/ < project-name > .git
 ```
 
 Replacing _< project-name >_ with the corresponding project name.
@@ -254,6 +256,6 @@ If something is not working, be sure to contact us by [Creating a new issue on t
 
 You may require to debug your code. This can be easily achieved in VSCode by setting breakpoints, which can be done by clicking on the gutter of any file.
 
-Then, just toggle the _"Debug: Toggle Auto Attach" option, which you can do by accessing the **Command Palette** (Ctrl+Shift+P or Cmd+Shift+P) and selecting the option. You can run it again to disable the auto connect feature.
+Then, just toggle the \_"Debug: Toggle Auto Attach" option, which you can do by accessing the **Command Palette** (Ctrl+Shift+P or Cmd+Shift+P) and selecting the option. You can run it again to disable the auto connect feature.
 
 If you select the "Always" option, then you will need to reload your built-in terminal (this will be marked by a yellow warning sign in your terminal icon). After that, any command you execute through npm will be ready to be debugged.

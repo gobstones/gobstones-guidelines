@@ -22,7 +22,9 @@ function switchCurrentLocationToProjectRoot() {
 function buildProject() {
     rimraf(verifyLinks.distFolder);
     execSync('npx @11ty/eleventy');
-    execSync(`npx linkinator "${verifyLinks.distFolder}/**/*${verifyLinks.distFileExtension}" --format json > ${verifyLinks.fileLocation}`);
+    execSync(
+        `npx linkinator "${verifyLinks.distFolder}/**/*${verifyLinks.distFileExtension}" --format json > ${verifyLinks.fileLocation}`
+    );
     execSync('sleep 1');
 }
 
@@ -49,10 +51,9 @@ function generateLinkinatorReport() {
             continue;
         }
         // Process link
-        const docName =
-            link.parent
-                .replace(`${distNoStarting}/`, `${verifyLinks.srcFolder}/`)
-                .replace(verifyLinks.distFileExtension, verifyLinks.srcFileExtension);
+        const docName = link.parent
+            .replace(`${distNoStarting}/`, `${verifyLinks.srcFolder}/`)
+            .replace(verifyLinks.distFileExtension, verifyLinks.srcFileExtension);
         let url = link.url;
         if (!url.match(/^(?:[a-z+]+:)?\/\//i)) {
             url = path.relative(path.dirname(link.parent), link.url);
@@ -76,7 +77,7 @@ function generateLinkinatorReport() {
         if (!linksPerDoc[docName]) {
             linksPerDoc[docName] = { passed: true, links: [] };
         }
-        documents.push(docName)
+        documents.push(docName);
         linksPerDoc[docName].links.push({
             url: url,
             status: link.status,
@@ -93,8 +94,8 @@ function generateLinkinatorReport() {
         }
 
         if (isIgnoredError && link.status !== 200) {
-            linksPerDoc[docName].links[ linksPerDoc[docName].links.length-1].status = 200;
-            linksPerDoc[docName].links[ linksPerDoc[docName].links.length-1].state = 'OK';
+            linksPerDoc[docName].links[linksPerDoc[docName].links.length - 1].status = 200;
+            linksPerDoc[docName].links[linksPerDoc[docName].links.length - 1].state = 'OK';
         } else {
             if (link.state !== 'OK') {
                 linksPerDoc[docName].passed = false;
@@ -105,7 +106,7 @@ function generateLinkinatorReport() {
 
     // We are going to add them in a sorted manner
     documents.sort();
-    const sortedValues = {}
+    const sortedValues = {};
     for (const file of documents) {
         sortedValues[file] = linksPerDoc[file];
     }
@@ -155,7 +156,7 @@ function printTestResults(testStatus) {
     console.log(`Documents analyzed: ${pagesAmount}`);
     console.log(`Broken documents: ${pagesBroken}`);
     console.log(`Broken links: ${brokenLinks}`);
-    console.log(`Status: ${passed ? 'PASS': 'FAIL'}`);
+    console.log(`Status: ${passed ? 'PASS' : 'FAIL'}`);
 }
 
 function runTests() {

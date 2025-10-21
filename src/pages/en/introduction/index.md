@@ -1,10 +1,12 @@
 ---
 title: Introduction
+lang: en
 eleventyNavigation:
     key: Introduction
     parent: Overview
     order: 1
 ---
+
 # Introduction to the **GobstonesWeb2** guidelines
 
 The Gobstones-guidelines contain documentation on the platform architecture, design guidelines, ways to contribute, and standards used, related to the development of **GobstonesWeb2**.

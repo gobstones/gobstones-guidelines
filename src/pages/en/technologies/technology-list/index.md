@@ -1,10 +1,12 @@
 ---
 title: Technology List
+lang: en
 eleventyNavigation:
     key: Technology List
     parent: Technologies
     order: 1
 ---
+
 # Technology List
 
 **GobstonesWeb2** is based on several technologies. If you want to contribute to the project with code, is mandatory for you to know some of these technologies, such as the programming language **TypeScript**, the **Node.js** platform or the **Git** version control system. For other technologies you may find configuration files at the root of the project, or you will run commands that actually run those tools under the hood, but you will probably not interact with them every-day. Although a deep knowledge on such tools is not required in order to contribute, being at least aware of the technologies in use is a must.
@@ -105,21 +107,32 @@ Also, if you have been using the `git` command in the past, you may find a sligh
 
 The tools in this section are used for either orchestrating the execution of development actions, generating binary or exportable builds.
 
-### nps
+### zx
 
-We use `nps` command as the task manager.
+We use Google's `zx` command to run the tasks, acting as a task manager.
 
-To define and execute custom scripts within **Node.js**, and running all the tooling in a simple fashion, we use **nps** (**Node Package Scripts**), the `nps` command line tool. **nps** is a task manager or task executor (in the same fashion as `grunt` or `gulp`). It's a little dated, but we found elegance in it's simplicity.
+The **zx** library is not formally a task manager, but we have defined a few
+scripts that, when called, act as a task manager in practice. The scripts (and
+tasks) live in a `.scripts` folder at the root of the project. Files in that
+folder are TypeScript files that run using **zx**, and each file represents a
+different task that can be called through `npm start <task>`.
 
-The good thing about nps is that it does not require knowledge of complex models and tools, as it uses the same principle that it's embedded in npm through the `scripts` section declared in the `package.json` file. The `nps` tool just takes it one step further, allowing to configure the scripts to run in a separate file. `nps` is useful when the scripts needed to run exceed some simple strings, or when there are too many of them. It additionally provides a way to list all commands, declare documentation for them, etc. In all projects of the **GobstonesWeb2** platform, running `npm start` runs the help on all defined `nps` commands that you may execute.
+The added scripts include the underscored prefixed files, such as `_cli`,
+`_paths` and `_helpers` which provide functionality to act as a task manager by
+calling the `_cli` script with arguments. You may modify this files in some
+scenarios when needed.
 
-The configuration file for `nps`, `package-scripts.js` is, by default, abstracted away by `gobstones-scripts`, although you can eject it if you need to change the behavior of any task. This is a simple js file that exports a single object declaring the configuration of all the possible scripts to run, and the code each of them will execute on the terminal.
+To add custom tasks, just add files with the name of the command you wish to the
+`.scripts` folder, and write the script using **zx** functionality.
 
-The default file included in `gobstones-scripts` provides some basic actions, such as executing in development mode, building the application, running the tests, building and serving the documentation, linting the files, etc. You may run any task using `npm start` followed by the task to run, or simply run `npm start` to get the full list of scripts available.
+The good thing about **zx** is that it provides a simple way to interact with
+all the elements you would if using shell scripting, with the added benefits of
+using TypeScript libraries and tooling.
 
-Additionally, if you find ejected configuration files in any project, you may observe that the file makes use of some helper tasks exported by the `gobstones-scripts` module, such as `serially` or `concurrently`. The `gobstones-scripts` module provides such tasks as to simplify the declaration of these files.
-
-Again, basic configuration has already been provided, and there is not much you need to do to start using it other than downloading the projects and installing the dependencies. Nonetheless, you may read more about **nps** at [their npmjs page](https://www.npmjs.com/package/nps).
+Again, basic configuration has already been provided, and there is not much you
+need to do to start using it other than downloading the projects and installing
+the dependencies. Nonetheless, you may read more about **zx** at [their official
+webpage](https://google.github.io/zx/).
 
 ### Rollup
 
@@ -129,7 +142,7 @@ Most modern projects rely in what is known as a **bundler** that packages all th
 
 The `rollup` command also has many plugins that extend it's capabilities. Some allow us to pack additional filetypes, such as JSON, CSS, images, etc., others allow to minify or obfuscate the produced code. One such plugin calls the **TypeScript compiler**, and compiles the code. This avoids the need to call the compiler directly, and you will find that most projects in **GobstonesWeb2** use this configuration instead of calling the compiler manually as a first step
 
-You do not need to know `rollup`` in detail unless you need to change the way a project is bundled or compiled. The configuration file,`rollup.config.js` is hidden by the `Gobstones-scripts` module. You may always overwrite the default by **ejecting** the configuration files.
+You do not need to know `rollup`` in detail unless you need to change the way a project is bundled or compiled. The configuration file,`rollup.config.js`is hidden by the`Gobstones-scripts` module. You may always overwrite the default by **ejecting** the configuration files.
 
 A good starting point to know the basics on **Rollup.js** is [rollupjs.org](https://rollupjs.org/).
 

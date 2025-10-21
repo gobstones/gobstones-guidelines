@@ -1,10 +1,12 @@
 ---
 title: Testing
+lang: en
 eleventyNavigation:
     key: Testing
     parent: Coding
     order: 5
 ---
+
 # Testing **GobstonesWeb2** projects
 
 One of the important aspects of the code you add to any project implies complying with existing tests, as well as adapting or developing new tests if there is significant new functionality added.
@@ -138,16 +140,12 @@ And another one:
 >         });
 >     });
 > });
+> ```
 
 You can import all of them as follows:
 
 ```ts
-import {
-    it, expect, describe,
-    describe as given,
-    describe as when,
-    describe as withInput
-} from '@jest/globals';
+import { it, expect, describe, describe as given, describe as when, describe as withInput } from '@jest/globals';
 ```
 
 ### General guidelines when writing tests

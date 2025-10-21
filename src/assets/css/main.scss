@@ -1,5 +1,4 @@
 /* Change color for code */
-
 :root {
     --light-color-text: #222;
     --light-color-text-aside: #6e6e6e;
@@ -89,6 +88,10 @@
 }
 
 /** ============== Layout =============== **/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-background-header);
+}
 
 body {
     background-color: var(--color-background);
@@ -312,46 +315,6 @@ header {
         max-width: 1700px;
         padding: 0 2rem;
     }
-
-    .logo {
-        text-decoration: none;
-        color: var(--color-text);
-        font-weight: bolder;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: left center;
-    }
-
-    nav {
-        display: none;
-
-        ul {
-            display: inline-block;
-            padding: 0;
-            margin: 0 -15px 0 0;
-            list-style: none;
-        }
-
-        li {
-            display: inline;
-        }
-
-        a {
-            display: inline-block;
-            margin-right: 1rem;
-            color: var(--color-text);
-            text-decoration: none;
-            margin-bottom: 0.5rem;
-            transition: opacity 0.2s;
-
-            &:hover {
-                opacity: 0.75;
-            }
-            &.current {
-                color: var(--color-link);
-            }
-        }
-    }
 }
 
 
@@ -390,6 +353,48 @@ header {
     padding: 1rem;
 }
 
+/** ============== Toolbar ============== **/
+
+.page-toolbar-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bolder;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolbar-icon {
+    width: 30px;
+    align-self: center;
+    margin-right: 0.3rem;
+    vertical-align: middle;
+}
+
+:root[data-theme='dark'] .icon-inverted {
+    -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
+    filter: invert(.75);
+}
+@media (prefers-color-scheme: dark) {
+    .icon-inverted {
+        -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
+        filter: invert(.75);
+    }
+}
+
 /** ============== Navigation ============== **/
 
 nav.navigation,
@@ -398,6 +403,9 @@ nav.navigation,
         margin: 0;
         list-style: none;
         padding-left: 1.5em;
+    }
+    & > ol, & > ul {
+        padding-left: 0;
     }
 
     li {
@@ -430,6 +438,34 @@ nav.navigation {
     display: none;
 }
 
+.navigation .navigation a::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (prefers-color-scheme: light) {
+    .navigation .navigation a::before {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><g id='icon-8388608'><rect fill='white' stroke='black' stroke-width='1.5' x='1' y='1' width='22' height='22' rx='6'></rect><g stroke='black' fill='none' stroke-width='1.5'><polygon points='6,5 6,19 18,19, 18,10 13,5'></polygon><line x1='9' y1='9' x2='13' y2='9'></line><line x1='9' y1='12' x2='15' y2='12'></line><line x1='9' y1='15' x2='15' y2='15'></line></g></g></svg>");
+    }
+}
+:root[data-theme="light"] .navigation .navigation a::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><g id='icon-8388608'><rect fill='white' stroke='black' stroke-width='1.5' x='1' y='1' width='22' height='22' rx='6'></rect><g stroke='black' fill='none' stroke-width='1.5'><polygon points='6,5 6,19 18,19, 18,10 13,5'></polygon><line x1='9' y1='9' x2='13' y2='9'></line><line x1='9' y1='12' x2='15' y2='12'></line><line x1='9' y1='15' x2='15' y2='15'></line></g></g></svg>");
+}
+@media (prefers-color-scheme: dark) {
+    .navigation .navigation a::before {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><g id='icon-8388608'><rect fill='black' stroke='white' stroke-width='1.5' x='1' y='1' width='22' height='22' rx='6'></rect><g stroke='white' fill='none' stroke-width='1.5'><polygon points='6,5 6,19 18,19, 18,10 13,5'></polygon><line x1='9' y1='9' x2='13' y2='9'></line><line x1='9' y1='12' x2='15' y2='12'></line><line x1='9' y1='15' x2='15' y2='15'></line></g></g></svg>");
+    }
+}
+:root[data-theme="dark"] .navigation .navigation a::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><g id='icon-8388608'><rect fill='black' stroke='white' stroke-width='1.5' x='1' y='1' width='22' height='22' rx='6'></rect><g stroke='white' fill='none' stroke-width='1.5'><polygon points='6,5 6,19 18,19, 18,10 13,5'></polygon><line x1='9' y1='9' x2='13' y2='9'></line><line x1='9' y1='12' x2='15' y2='12'></line><line x1='9' y1='15' x2='15' y2='15'></line></g></g></svg>");
+}
+
 @media (min-width: 768px) {
     nav.navigation {
         display: inline-block;
@@ -456,6 +492,19 @@ nav.navigation {
         border-top: 1px solid var(--color-accent);
     }
 }
+
+.theme-container span {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.theme-container select {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    padding: 0.1rem;
+    margin-left: 1rem;
+}
+
 /** =========== Breadcrumbs ============= **/
 
 .breadcrumb {

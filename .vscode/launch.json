@@ -7,28 +7,18 @@
         {
             "name": "Run Dev (npm run dev)",
             "request": "launch",
-            "runtimeArgs": [
-                "run-script",
-                "dev"
-            ],
+            "runtimeArgs": ["run-script", "dev"],
             "runtimeExecutable": "npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "type": "node"
         },
         {
             "name": "Test (npm run test)",
             "request": "launch",
-            "runtimeArgs": [
-                "run-script",
-                "test"
-            ],
+            "runtimeArgs": ["run-script", "test"],
             "runtimeExecutable": "npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "type": "node"
-        },
+        }
     ]
 }

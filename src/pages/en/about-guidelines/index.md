@@ -1,9 +1,11 @@
 ---
 title: About guidelines
+lang: en
 eleventyNavigation:
     key: About guidelines
     order: 3
 ---
+
 # About guidelines
 
 The `gobstones-guidelines` repository contains documentation on the platform architecture, design guidelines, ways to contribute, and standards used, related to the development of **GobstonesWeb2**.

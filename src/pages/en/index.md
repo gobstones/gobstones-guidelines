@@ -1,9 +1,11 @@
 ---
 title: Overview
+lang: en
 eleventyNavigation:
     key: Overview
     order: 1
 ---
+
 # Overview
 
 This repository contains documentation on the platform architecture, design guidelines, ways to contribute, and standards used, related to the development of **GobstonesWeb2**.

@@ -1,10 +1,12 @@
 ---
 title: Submission Workflow
+lang: en
 eleventyNavigation:
     key: Submission Workflow
     parent: Coding
     order: 4
 ---
+
 # Submission Workflow
 
 In order to submit code, you should be aware of the process to be assigned with tasks, generate code and submit it for addition into the main code base. This is a simple process, yet it's important to follow it in order to avoid multiple people working in the same task, or generate work that is not going to be considered for addition, as well as to keep a proper communication between the developers that contribute to the projects.
@@ -46,7 +48,7 @@ Once a task is created, some tags may be assigned to it, such as:
 * **Feature**: For tasks that involve adding new features.
 * **Bug**: For tasks that involve correcting a bug.
 * **Style**: For tasks that involve changing style or documentation.
-Others may be used in the future and will be documented appropriately here if that is the case.
+  Others may be used in the future and will be documented appropriately here if that is the case.
 
 In the case of external contributors, they cannot create tasks directly in the project, but they can report issues in any of the repositories the project is comprised of. Once an issue is reported, the members of the internal team will move the issue to an appropriate column, if it's an issue that should be regarded as important, or discard the issue completely (many issued reported are not actual feature request or bug reports, but request for help in the tool's usage or simple discussions about the tool).
 
@@ -129,7 +131,6 @@ git branch -D add-some-feature
 
 > Be sure to always start new branches from `main`, and not from another
 > feature branch.
->
 
 ### Working on a task (external collaborators)
 
@@ -140,21 +141,21 @@ First, go to **GitHub** and seek for the repository you are going to work on. Yo
 Once the fork is done, open a terminal and clone the project from your user account. Do use SSH and not HTTPS.
 
 ```sh
-git clone git@github.com:<your-username>/<project-name>.git
+git clone git@github.com: < your-username > / < project-name > .git
 ```
 
 Then, navigate to the project folder from your terminal and add the Gobstones organization repository as a new remote by the `upstream` name.
 
 ```sh
-git remote add upstream git@github.com:gobstones/<project-name>.git
+git remote add upstream git@github.com:gobstones/ < project-name > .git
 ```
 
 Now you should be able to execute the following command and see the output:
 
 ```sh
 $ git remote -v
-origin git@github.com:<your-username>/<project-name>.git
-upstream git@github.com:gobstones/<project-name>.git
+origin git@github.com: < your-username > / < project-name > .git
+upstream git@github.com:gobstones/ < project-name > .git
 ```
 
 Now you should follow the same steps as an **internal team member**, with some slight differences. Please consider that, when generating a pull request, the target of the request should be the `main` branch of the original Gobstones organization repository, and not the one in your user account. That is, you should target `main` at `gobstones` not `main` at `your-username`.

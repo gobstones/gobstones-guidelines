@@ -1,10 +1,12 @@
 ---
 title: Services List
+lang: en
 eleventyNavigation:
     key: Services List
     parent: Technologies
     order: 2
 ---
+
 # Technologies used in **GobstonesWeb2**
 
 **GobstonesWeb2** makes use of several services provided by third party companies, mainly **GitHub**. This attempts to be a full list of such services for further reference. If you are an external contributor, you will probably only need to know about GitHub and **npmjs**.

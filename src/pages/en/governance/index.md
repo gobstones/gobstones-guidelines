@@ -1,10 +1,12 @@
 ---
 title: Governance
+lang: en
 eleventyNavigation:
     key: Governance
     parent: Overview
     order: 2
 ---
+
 # Governance
 
 Welcome to the first step in contributing the Gobstones organization.

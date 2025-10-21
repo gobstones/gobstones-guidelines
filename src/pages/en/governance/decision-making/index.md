@@ -1,10 +1,12 @@
 ---
 title: Decision Making
+lang: en
 eleventyNavigation:
     key: Decision Making
     parent: Governance
     order: 1
 ---
+
 # Decision Making
 
 Currently, the project decision making is handled by the **Core Team**. These team currently takes all major decisions regarding the language and the environments, thus providing direction, defining the metrics for validating impact to the project, and providing the tools needed to communicate, deliver on requirements, etc.
@@ -46,8 +48,8 @@ The list of current members of the **Core Team** deciding all the major aspects 
 
 <div class="contact-card">
     <img
-        alt="Juan Cruz Insaurralde's avatar"
-        src="https://avatars.githubusercontent.com/u/70179741?v=4">
+        alt="Federico Agustín Sawady O'Connor's avatar"
+        src="https://avatars.githubusercontent.com/u/1155654?v=4">
     <div>
         <h3>Federico Agustín Sawady O'Connor</h3>
         <h4>Developer</h4>

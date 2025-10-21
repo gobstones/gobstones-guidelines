@@ -1,10 +1,12 @@
 ---
 title: Technologies
+lang: en
 eleventyNavigation:
     key: Technologies
     parent: Overview
     order: 4
 ---
+
 # Technologies used in **GobstonesWeb2**
 
 We make use of many different technologies and use several platforms in order to develop **GobstonesWeb2**. If you're planning on contributing to the platform with code, or you want to understand better how the different projects work, you should definitely read all the sections below.

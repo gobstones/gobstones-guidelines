@@ -1,11 +1,13 @@
 ---
 title: Architecture
+lang: en
 eleventyNavigation:
     key: Architecture
     parent: Overview
     order: 3
 ---
-# **Architecture of **GobstonesWeb2****
+
+# **Architecture of**GobstonesWeb2\*\*\*\*
 
 The architecture of **GobstonesWeb2** combines several modules providing different functionalities. They all interrelate to conform what is known as the **GobstonesWeb2**, and together with the contents, pedagogic proposals and others conform the **Gobstones Platform**. This section lists all the different modules that compose the architecture, their current status, and how they interrelate.
 
